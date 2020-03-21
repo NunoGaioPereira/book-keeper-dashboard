@@ -10,12 +10,13 @@
 			<a href=""><img src="./imgs/logo.png"></a>
 		</div>
 		<ul>
-			<a href="./" class="<?php if($page == 'Home'){echo 'active';} ?>"><img src="./imgs/list.png"></a>
-			<a href="#/" class="blah <?php if($page == 'TODO'){echo 'active';} ?>"><img src="./imgs/book_plus.png"></a>
-			<a href="./day.php" class="<?php if($page == 'Day'){echo 'active';} ?>"><img src="./imgs/notes.png"></a>
-			<a href="#/" class="logout <?php if($page == 'TODO'){echo 'active';} ?>"><img src="./imgs/settings.png"></a>
+			<a href="./" class="<?php if($page == 'Home'){echo 'active';} ?>"><img src="./imgs/home.png"></a>
+			<a href="./" class="<?php if($page == 'Books'){echo 'active';} ?>"><img src="./imgs/list.png"></a>
+			<a href="#/" class="blah <?php if($page == 'New Book'){echo 'active';} ?>"><img src="./imgs/book_plus.png"></a>
+			<a href="./day.php" class="<?php if($page == 'Notes'){echo 'active';} ?>"><img src="./imgs/notes.png"></a>
+			<a href="#/" class="logout <?php if($page == 'Settings'){echo 'active';} ?>"><img src="./imgs/settings.png"></a>
 		</ul>
-		<ul class="bottom-links">
-			<a href="#/" class="apps"><img src="./includes/imgs/logout.png"></a>
-		</ul>
+		<form class="logout">
+			<button><img src="./imgs/logout.png"></button>
+		</form>
 	</div>

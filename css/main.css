@@ -45,7 +45,7 @@ a {
 	width: var(--side-nav-width);
 	height: 100vh;
 	position: fixed;
-	padding: 30px 0;
+	padding: 20px 0;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -56,38 +56,31 @@ a {
 
 #side-nav .hamburguer {
 	display: flex;
-	/*margin-top: 30px;*/
-	/*text-align: center;*/
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#side-nav .hamburguer .hamb img {
-	width: 28px;
-}
-
-#side-nav .hamburguer a img {
-	width: 22px;
+#side-nav .logo img {
+	width: 45px;
 }
 
 #side-nav ul {
-	/*margin-top: 125px;*/	
 	text-align: center;
 }
 
 #side-nav ul a {
 	/*margin: 50px 0;*/
-	padding: 8px 10px;
+	padding: 4px 10px;
 	display: block;
 	text-decoration: none;
-	margin: 15px 0;
+	margin: 35px 0;
 	width: var(--side-nav-width);
 	position: relative;
 }
 
 /*#side-nav ul a.active {
-	border-left: 3px solid #fff;
+	border-right: 3px solid var(--main-blue);
 	padding-left: 7px;
 }*/
 
@@ -97,7 +90,7 @@ a.active::after {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    border-right: 7px solid #fff;
+    border-right: 7px solid var(--main-blue);
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
 }
@@ -107,11 +100,23 @@ a.active::after {
 }
 
 #side-nav ul a img {
-	width: 22px;
+	width: 30px;
 	transition: opacity 0.2s ease-in-out;
 }
 
 .main-wrapper {
 	background-color: var(--background-color);
 	margin-left: var(--side-nav-width);
+	padding: 30px;
+	min-height: 100vh;
+}
+
+.logout button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.logout button img {
+	width: 30px;
 }
