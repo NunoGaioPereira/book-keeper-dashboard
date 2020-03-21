@@ -1,0 +1,117 @@
+:root {
+	--main-blue: #227ee5;
+	--side-nav-width: 60px;
+	--background-color: #f8f7fc;
+	--moving-nav-color: #eaeaea;
+	--top-nav-height: 50px;
+	--text-color: #444;
+	--light-text-color: #c3c3c3;
+	--light-gray: #c3c3c3;
+
+	--yellow: #faaa1f;
+	--light-yellow: #ffe7b9;
+	--red: #ff4c61;
+	--light-red: #ff7788;
+	--lighter-red: #fed1d5;
+	--purple: #6a6ce6;
+	--light-purple: #d3d9f3;
+	--light-blue: #dbe1f9;
+	--light-blue-gray: #f7f8fd;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/*font-family: 'Segoe UI', sans-serif;*/
+	font-family: 'Montserrat', sans-serif;
+	color: var(--text-color);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+#side-nav {
+	background-color: #fff;
+	width: var(--side-nav-width);
+	height: 100vh;
+	position: fixed;
+	padding: 30px 0;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}	
+
+#side-nav .hamburguer {
+	display: flex;
+	/*margin-top: 30px;*/
+	/*text-align: center;*/
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#side-nav .hamburguer .hamb img {
+	width: 28px;
+}
+
+#side-nav .hamburguer a img {
+	width: 22px;
+}
+
+#side-nav ul {
+	/*margin-top: 125px;*/	
+	text-align: center;
+}
+
+#side-nav ul a {
+	/*margin: 50px 0;*/
+	padding: 8px 10px;
+	display: block;
+	text-decoration: none;
+	margin: 15px 0;
+	width: var(--side-nav-width);
+	position: relative;
+}
+
+/*#side-nav ul a.active {
+	border-left: 3px solid #fff;
+	padding-left: 7px;
+}*/
+
+a.active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-right: 7px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+}
+
+#side-nav ul a:hover > img {
+	opacity: 0.6;
+}
+
+#side-nav ul a img {
+	width: 22px;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.main-wrapper {
+	background-color: var(--background-color);
+	margin-left: var(--side-nav-width);
+}
