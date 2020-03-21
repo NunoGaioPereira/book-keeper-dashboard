@@ -7,17 +7,9 @@
 	--text-color: #444;
 	--light-text-color: #c3c3c3;
 	--light-gray: #c3c3c3;
-
-	--yellow: #faaa1f;
-	--light-yellow: #ffe7b9;
-	--red: #ff4c61;
-	--light-red: #ff7788;
-	--lighter-red: #fed1d5;
-	--purple: #6a6ce6;
-	--light-purple: #d3d9f3;
-	--light-blue: #dbe1f9;
-	--light-blue-gray: #f7f8fd;
 }
+
+/*document.documentElement.style.setProperty('--main-blue', 'red');*/
 
 * {
 	padding: 0;
@@ -127,41 +119,52 @@ a.active::after {
 
 .notes-container .book {
 	background-color: #fff;
-	max-width: 450px;
+	/*max-width: 800px;*/
 	padding: 25px;	
 	/*border-radius: 15px;*/
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 	display: flex;
-
-	justify-content: center;
+	margin-bottom: 30px;
 	align-items: center;
 }
 
-.notes-container .book h3 {
+.notes-container .book .book-info h3 {
 	color: var(--main-blue);
 }
 
-.notes-container .book h4 {
-	color: #aaa;
+.notes-container .book .book-info h4 {
+	color: #333;
+	margin-bottom: 15px;
 }
 
-.notes-container .book a {
+.notes-container .book .book-info p {
+	margin-bottom: 30px;
+}
+
+.notes-container .book .book-info a {
 	display: block;
 	color: var(--main-blue);
 	padding: 10px 20px;
 	width: 140px;
 	font-weight: 600;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	border: 2px solid var(--main-blue);
 	transition: all 0.2s ease-in-out;
 }
 
-.notes-container .book a:hover {
+.notes-container .book .book-info a:hover {
 	background-color: var(--main-blue);
 	color: #fff;
 }
 
 .notes-container .book img {
-	height: 200px;
+	max-height: 220px;
 	margin-right: 20px;
+}
+
+.notes-container .book .book-info {
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*justify-content: space-between;*/
+	/*height: 220px;*/
 }
