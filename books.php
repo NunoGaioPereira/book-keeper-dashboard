@@ -6,6 +6,10 @@
 	<div class="main-wrapper">
 		<h2>Books</h2>
 		<p>Your Book Collection</p>
+
+		<div class="table-container">
+			
+		</div>
 	</div>
 
 	<script src="js/main.js"></script>

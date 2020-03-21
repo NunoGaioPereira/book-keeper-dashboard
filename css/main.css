@@ -100,7 +100,7 @@ a.active::after {
 }
 
 #side-nav ul a img {
-	width: 30px;
+	width: 25px;
 	transition: opacity 0.2s ease-in-out;
 }
 
@@ -118,5 +118,50 @@ a.active::after {
 }
 
 .logout button img {
-	width: 30px;
+	width: 25px;
+}
+
+.notes-container {
+	margin: 30px 0;
+}
+
+.notes-container .book {
+	background-color: #fff;
+	max-width: 450px;
+	padding: 25px;	
+	/*border-radius: 15px;*/
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.notes-container .book h3 {
+	color: var(--main-blue);
+}
+
+.notes-container .book h4 {
+	color: #aaa;
+}
+
+.notes-container .book a {
+	display: block;
+	color: var(--main-blue);
+	padding: 10px 20px;
+	width: 140px;
+	font-weight: 600;
+	margin-top: 20px;
+	border: 2px solid var(--main-blue);
+	transition: all 0.2s ease-in-out;
+}
+
+.notes-container .book a:hover {
+	background-color: var(--main-blue);
+	color: #fff;
+}
+
+.notes-container .book img {
+	height: 200px;
+	margin-right: 20px;
 }
