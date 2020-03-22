@@ -30,7 +30,7 @@
 						} else if($_GET["error"] == "wrongpwd") {
 							echo "<p class=\"error-msg\">Você falhou, tente novamente!</p>";
 						} else if($_GET["error"] == "loggedout") {
-							echo "<p class=\"error-msg\">O senhor foi logged out da sua maravilhosa dashboard!</p>";
+							echo "<p class=\"error-msg\">Logout efectuado</p>";
 						}
 					}
 				?>
