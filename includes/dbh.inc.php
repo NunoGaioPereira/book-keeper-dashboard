@@ -2,7 +2,7 @@
 	$host = "localhost";
 	$user = "root";
 	$password = "nGlwwzfu4d5pdH2a";
-	$dbname = "bookkeeper";
+	$dbname = "book_keeper";
 	$dsn = "mysql:host=$host;dbname=$dbname";
 
 	try	{

@@ -241,6 +241,53 @@ a.active::after {
 	font-weight: 600;
 }*/
 
+
+/*--------- BOOKS --------*/
+.table-container {
+	/*position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);*/
+	text-align: left;
+	height: 450px;
+	margin: 20px 0;
+	width: 100%;
+	overflow-y: scroll;
+	box-shadow: 0 0 10px rgba(0,0,0,0.35);
+}
+
+.table-container table {
+	width: 100%;
+	background-color: #fff;
+}
+
+.table-container th {
+	background-color: var(--main-blue);
+	color: #fff;
+	position: sticky;
+	top: 0;
+	padding: 10px;
+	font-weight: 500;
+}
+
+.table-container th, .table-container table {
+	border: none;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.table-container td {
+	//border: 1px solid #005277;
+	border: none;
+	// border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-collapse: collapse;
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 10px 0;
+} 
+
+
 .form-container .new-book select {
 	padding: 10px;
 	width: 200px;
