@@ -31,6 +31,8 @@
 							echo "<p class=\"error-msg\">Você falhou, tente novamente!</p>";
 						} else if($_GET["error"] == "loggedout") {
 							echo "<p class=\"error-msg\">Logout efectuado</p>";
+						} else if($_GET["error"] == "nouser") {
+							echo "<p class=\"error-msg\">Utilizador não encontrado</p>";
 						}
 					}
 				?>
