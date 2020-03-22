@@ -443,3 +443,66 @@ a.active::after {
 
 
 /* --- LOGIN --- */
+
+.login-body {
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+}
+
+.login-body .login-form-container {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 300px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.login-body .login-form-container img {
+	width: 80px;
+}
+
+.login-body .login-form-container .login-title {
+	margin-bottom: 20px;
+	font-size: 25px;
+}
+
+.login-body .login-form-container form {
+	width: 100%;
+}
+
+.login-body .login-form-container form input {
+    width: 100%;
+    padding: 14px 12px;
+    margin: 8px 0;
+    border: none;
+    background-color: #eae7e2;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.login-body .login-form-container form .login-btn {
+	margin: 10px 0 20px;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    background-color: var(--main-blue);
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    padding: 14px 12px;
+    font-size: 16px;
+    border: 2px solid var(--main-blue);
+}
+
+.login-body .login-form-container form .login-btn:hover {
+	background-color: #fff;
+	color: var(--main-blue);
+}
+
+.login-body .login-form-container form .error-msg {
+	color: red;
+	margin-bottom: 5px;
+}
