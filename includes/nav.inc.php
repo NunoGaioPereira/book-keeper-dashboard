@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+	<div id="cover"></div>
+	
 	<div id="side-nav">
 		<div class="logo">
 			<a href="./"><img src="./imgs/logo.png"></a>

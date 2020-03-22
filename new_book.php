@@ -29,17 +29,33 @@
 							<option>Poesia</option>
 							<option>Divulgação científica</option>
 						</select>
+						<a href="#/" class="add-gender">+</a>
 					</div>
-					<div class="add-gender">
-						<label>Adicionar Gênero</label>
-						<input type="text" name="new-gender" placeholder="Novo Gênero">
-							
-					</div>
+					<!-- <div class="add-gender">
+						<div class="gender-fields">
+							<label>Adicionar Gênero</label>
+							<input type="text" name="new-gender" placeholder="Novo Gênero">
+						</div>
+						<input type="submit" name="" class="submit-gender" value="+">
+					</div> -->
 				</div>
 
 				<input type="submit" class="btn-submit" value="Adicionar Livro">
 			</form>
 		</div>
+
+		<div id="gender-popup">
+			<div class="header">
+				<h3>Novo Gênero</h3>
+				<a href="#/" class="gender-popup-close" style="height: 18px;"><img src="./imgs/cross.png"></a>
+			</div>
+			<form>
+				<p class="success">Gênero adicionado!</p>
+				<input type="text" name="new-gender" placeholder="Novo Gênero">
+				<input type="submit" name="" class="submit-gender" value="Criar Gênero">
+			</form>
+		</div>
+
 	</div>
 
 	<script src="js/main.js"></script>

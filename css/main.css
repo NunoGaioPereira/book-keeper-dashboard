@@ -215,13 +215,110 @@ a.active::after {
 	background-color: var(--main-blue);
 }
 
-.form-container .new-book .gender {
+/*.form-container .new-book .gender {
 	display: flex;
 	justify-content: space-between;
 }
+
+.form-container .new-book .gender .add-gender {
+	display: flex;
+	align-items: flex-end;
+}
+
+.form-container .new-book .gender .add-gender .gender-fields {
+	width: 150px;
+}
+
+.form-container .new-book .gender .add-gender .submit-gender {
+	height: 43px;
+	width: 40px;
+	border: none;
+	background-color: var(--main-blue);
+	color: #fff;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 600;
+}*/
 
 .form-container .new-book select {
 	padding: 10px;
 	width: 200px;
 	font-size: 16px;
+}
+
+#gender-popup {
+	padding: 20px;
+	background-color: #fff;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	max-width: 80vw;
+	width: 400px;
+	display: none;
+}
+
+#gender-popup.open {
+	display: initial;
+}
+
+#gender-popup .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#gender-popup .header h3 {
+	font-size: 25px;
+}
+
+#gender-popup .header a img {
+	width: 18px;
+}
+
+#gender-popup input {
+	display: block;
+	width: 100%;
+	padding: 8px 12px;
+}
+
+#gender-popup .submit-gender {
+	border: none;
+	color: #fff;
+	background-color: var(--main-blue);
+	cursor: pointer;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+#gender-popup p {
+	margin-bottom: 5px;
+}
+
+#gender-popup p.success {
+	color: #088608;
+}
+
+#gender-popup p.error {
+	color: red;
+}
+
+#cover {
+	width: 100vw;
+	height: 100vh;
+	z-index: 8;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.1s ease-in-out;
+}
+
+#cover.open {
+	display: initial;
+	opacity: 1;
 }
