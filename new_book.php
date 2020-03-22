@@ -4,10 +4,13 @@
 	require ("includes/nav.inc.php");
 ?>
 	<div class="main-wrapper">
-		<h2>New Book</h2>
-		<p>One More For The Collection</p>
+		<h2>Adicionar Livro</h2>
+		<p>Mais um para a coleção!</p>
 		<div class="form-container">
-			<form class="new-book" method="POST">
+			<form class="new-book" method="POST" action="./includes/upload.php" enctype="multipart/form-data">
+				<label>Capa</label>
+				<input type="file" name="image" accept="image/*" capture="user">
+
 				<label>Título</label>
 				<input type="text" name="title" placeholder="Título">
 
@@ -40,7 +43,7 @@
 					</div> -->
 				</div>
 
-				<input type="submit" class="btn-submit" value="Adicionar Livro">
+				<input type="submit" class="btn-submit" name="submit" value="Adicionar Livro">
 			</form>
 		</div>
 

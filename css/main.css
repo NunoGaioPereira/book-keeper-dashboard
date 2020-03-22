@@ -1,6 +1,6 @@
 :root {
 	--main-blue: #227ee5;
-	--side-nav-width: 60px;
+	--side-nav-width: 65px;
 	--background-color: #f8f7fc;
 	--moving-nav-color: #eaeaea;
 	--top-nav-height: 50px;
@@ -44,6 +44,7 @@ a {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	box-shadow: -2px 0 10px 0 rgba(0, 0, 0, 0.1);
 }	
 
 #side-nav .hamburguer {
@@ -244,6 +245,13 @@ a.active::after {
 	padding: 10px;
 	width: 200px;
 	font-size: 16px;
+}
+
+.form-container .new-book .add-gender {
+	color: #fff;
+	background-color: var(--main-blue);
+	display: inline-block;
+	padding: 10px 14px;
 }
 
 #gender-popup {
