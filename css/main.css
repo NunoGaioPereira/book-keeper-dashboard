@@ -244,24 +244,26 @@ a.active::after {
 
 /*--------- BOOKS --------*/
 .table-container {
-	/*position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);*/
 	text-align: left;
 	height: 450px;
 	margin: 20px 0;
 	width: 100%;
-	overflow-y: scroll;
-	box-shadow: 0 0 10px rgba(0,0,0,0.35);
+	/*overflow-y: scroll;*/
+	/*box-shadow: 0 0 10px rgba(0,0,0,0.35);*/
 }
 
 .table-container table {
 	width: 100%;
 	background-color: #fff;
+	table-layout: fixed;
 }
 
-.table-container th {
+.table-container table tbody {
+	overflow-y: scroll;
+	height: 450px;
+}
+
+.table-container table th {
 	background-color: var(--main-blue);
 	color: #fff;
 	position: sticky;
@@ -270,22 +272,83 @@ a.active::after {
 	font-weight: 500;
 }
 
-.table-container th, .table-container table {
+.table-container .table-header {
+	padding-right: 5px;
+	background-color: var(--main-blue);
+}
+
+.table-container th, .table-container table, .table-container tr, .table-container td {
 	border: none;
 	border-collapse: collapse;
 	text-align: left;
 }
 
+.table-container tr {
+	margin: 10px 0;
+	background-color: #fff;	
+	/*box-shadow: 0 0 10px rgba(0,0,0,0.35);*/
+}
+
+.table-container .table-content {
+	overflow-y: scroll;
+	height: 400px;
+}
+
+.table-container .table-content .actions {
+	width: 100px;
+	text-align: center;
+}
+
+.table-container .table-content .actions a img {
+	width: 30px;
+}
+
+.table-container tr:nth-child(odd) {
+	background: rgba(0,0,0,0.03);
+}
+
 .table-container td {
 	//border: 1px solid #005277;
 	border: none;
-	// border-bottom: 1px solid rgba(0,0,0,0.1);
+	/*border-bottom: 1px solid rgba(0,0,0,0.1);*/
 	border-collapse: collapse;
 	padding: 10px;
 	font-size: 14px;
 	font-weight: 500;
 	margin: 10px 0;
 } 
+
+.table-container .table-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.table-container .table-content::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.table-container .table-content::-webkit-scrollbar-thumb {
+  background-color: var(--main-blue);
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+
+.table-container .header {
+	margin: 5px 0 15px;
+}
+
+.table-container .header input {
+	padding: 8px 15px;
+	margin-right: 30px;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+.table-container .header input:focus, .table-interaction .header input:active {
+	border: none;
+	outline: none;
+}
+
 
 
 .form-container .new-book select {
