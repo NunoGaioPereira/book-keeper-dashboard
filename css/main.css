@@ -168,3 +168,60 @@ a.active::after {
 	/*justify-content: space-between;*/
 	/*height: 220px;*/
 }
+
+
+
+/*------ NEW BOOK --------*/
+.form-container {
+
+}
+
+.form-container .new-book {
+	max-width: 640px;
+	margin: 20px auto;
+	padding: 0 20px;
+}
+
+.form-container .new-book label {
+	display: block;
+	color: var(--main-blue);
+	font-weight: 600;
+	margin-bottom: 4px;
+	font-size: 
+}
+
+.form-container .new-book input {
+	display: block;
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 15px;
+	/*border: 2px solid var(--main-blue);*/
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.form-container .new-book .btn-submit {
+	color: var(--main-blue);
+	border: 2px solid var(--main-blue);
+	transition: all 0.25s ease-in-out;
+	background-color: #fff;
+	cursor: pointer;
+	font-weight: 600;
+	margin-top: 20px;
+}
+
+.form-container .new-book .btn-submit:hover {
+	color: #fff;
+	background-color: var(--main-blue);
+}
+
+.form-container .new-book .gender {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-container .new-book select {
+	padding: 10px;
+	width: 200px;
+	font-size: 16px;
+}
