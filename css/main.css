@@ -492,7 +492,8 @@ a.active::after {
     font-weight: bold;
     width: 100%;
     border: none;
-    padding: 14px 12px;
+    border-radius: 2px;
+    padding: 11px 12px;
     font-size: 16px;
     border: 2px solid var(--main-blue);
 }

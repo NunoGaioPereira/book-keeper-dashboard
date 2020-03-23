@@ -3,6 +3,8 @@
 <head>
 	<title><?php echo $page ?> - Book Keeper</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="cover"></div>
@@ -18,7 +20,7 @@
 			<a href="./notes.php" class="<?php if($page == 'Notes'){echo 'active';} ?>"><img src="./imgs/notes.png"></a>
 			<a href="./settings.php" class="<?php if($page == 'Settings'){echo 'active';} ?>"><img src="./imgs/settings.png"></a>
 		</ul>
-		<form class="logout">
+		<form class="logout" action="./includes/logout.inc.php">
 			<button><img src="./imgs/logout.png"></button>
 		</form>
 	</div>

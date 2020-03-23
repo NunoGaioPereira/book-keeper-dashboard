@@ -1,12 +1,9 @@
 <?php 
-	require('includes/dbh.inc.php');
+	// require('includes/dbh.inc.php');
 
 	session_start();
-
-	if(isset($_SESSION['userId'])) {
-		if($_SESSION['userId'] == '316429') {
-			header("Location: ./index.php");
-		}
+	if(isset($_SESSION['user_id'])) {
+		header("Location: ./index.php");
 	}
 ?>
 
