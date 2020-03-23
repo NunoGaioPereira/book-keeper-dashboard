@@ -71,8 +71,13 @@
 						type: "POST",
 						cache: false,
 						data: {'user_id': user_id, 'gender': gender},
-						success: function(){
-							alert("Gênero adicionado");
+						success: function(data){
+							if(data == "e") {
+								alert("Erro!");
+							}
+							else if (data == "s"){
+								alert("Gênero criado!")
+							}
 							// $("#musicians-table").load("./includes/update_pieces.inc.php", {id: id, action: 'fill-musicians-table'});
 						}
 					})

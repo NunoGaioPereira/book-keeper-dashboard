@@ -3,20 +3,21 @@
 
 	if(isset($_POST['gender'])) {
 
-		$sql = "INSERT INTO genders(userid, gender) VALUES(?, ?)";
+		try {
+			$sql = "INSERT INTO genders(userid, gender) VALUES(?, ?)";
 
-		$stmt = $conn->prepare($sql);
-		$stmt->bindParam(1, $_POST['user_id']);
-		$stmt->bindParam(2, $_POST['gender']);
-		$stmt->execute();
-		// header("Location: ../posts.php?msg=deletedconcert");1
-		if() {
-			
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(1, $_POST['user_id']);
+			$stmt->bindParam(2, $_POST['gender']);
+			$stmt->execute();
+			// header("Location: ../posts.php?msg=deletedconcert");1
+			echo "s";
 		}
-		else{
-	        $arr = array('a' => 'Unable to login');
-	        echo json_encode($arr);
-	    }
+		catch(PDOException $e) {
+			// $arr = array('e' => $e->getMessage());
+		 //    echo json_encode($arr);		
+		    echo "e";
+		}
 
 		$conn = null;
 		exit();
