@@ -15,7 +15,7 @@ if (isset($_POST['login-submit'])) {
 		else {
 			// no empty fields
 			// Get password from database
-			$sql = "SELECT userid, pwd FROM users WHERE userid = ?";
+			$sql = "SELECT id, userid, pwd FROM users WHERE userid = ?";
 			$stmt = $conn->prepare($sql);
 			$stmt->bindParam(1, $userid);
 			$stmt->execute();
@@ -31,7 +31,7 @@ if (isset($_POST['login-submit'])) {
 				else if ($pwdCheck == true and $userid == $result['userid']) {
 					// start a session
 					session_start();
-					$_SESSION['user_id'] = $result['userid'];
+					$_SESSION['user_id'] = $result['id'];
 					echo($_SESSION['user_id']);
 					header("Location: ../index.php");
 					exit();
