@@ -18,7 +18,7 @@
 			<a href="./books.php" class="<?php if($page == 'Books'){echo 'active';} ?>"><img src="./imgs/list.png"></a>
 			<a href="./new_book.php" class="blah <?php if($page == 'New Book'){echo 'active';} ?>"><img src="./imgs/book_plus.png"></a>
 			<a href="./notes.php" class="<?php if($page == 'Notes'){echo 'active';} ?>"><img src="./imgs/notes.png"></a>
-			<a href="./settings.php" class="<?php if($page == 'Settings'){echo 'active';} ?>"><img src="./imgs/settings.png"></a>
+			<!-- <a href="./settings.php" class="<?php if($page == 'Settings'){echo 'active';} ?>"><img src="./imgs/settings.png"></a> -->
 		</ul>
 		<form class="logout" action="./includes/logout.inc.php">
 			<button><img src="./imgs/logout.png"></button>

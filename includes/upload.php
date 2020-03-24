@@ -1,9 +1,9 @@
 <?php 
-	// session_start();
+	session_start();
 	// require ("includes/dbh.inc.php");
 if(isset($_POST['submit'])) {
 
-	if(!empty($_FILES['image'])) {
+	if($_FILES['image']['size'] == 0 && $_FILES['image']['error'] == 0) {
 		$file  = $_FILES['image'];
 
 		$fileName = $file['name'];
@@ -21,22 +21,24 @@ if(isset($_POST['submit'])) {
 			if($fileError === 0){
 				if($fileSize < 1000000) {
 					$fileNameNew = uniqid('', true).".".$fileActuelExt;
-					// $fileNameNew = $userid.$book_id.".".$fileActuelExt;
+					// $fileNameNew = $_SESSION['user_id'].$book_id.".".$fileActuelExt;
+					$fileNameNew = $_SESSION['user_id']."_".".".$fileActuelExt;
 					$fileDestination = '../imgs/'.$fileNameNew;
 
 					move_uploaded_file($fileTmpName, $fileDestination);
 					header("Location: ../index.php?uploadsuccess");
 				} else {
-					echo "Your file is too big!";
+					header("Location: ../index.php?error=toobig");
 				}
 			} else {
-				echo "Error uploading file!";
+				header("Location: ../index.php?error=uploaderror");
 			}
 		} else {
-			echo "You cannot uploads files of this type!";
+			header("Location: ../index.php?error=wrongtype");
 		}
 	} else {
 		$imgName = "default.jpg";
+		// echo $imgName;
 	}
 
 }
