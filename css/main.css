@@ -122,7 +122,6 @@ a.active::after {
 	background-color: #fff;
 	/*max-width: 800px;*/
 	padding: 25px;	
-	/*border-radius: 15px;*/
 	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 	display: flex;
 	margin-bottom: 30px;
@@ -216,32 +215,6 @@ a.active::after {
 	background-color: var(--main-blue);
 }
 
-/*.form-container .new-book .gender {
-	display: flex;
-	justify-content: space-between;
-}
-
-.form-container .new-book .gender .add-gender {
-	display: flex;
-	align-items: flex-end;
-}
-
-.form-container .new-book .gender .add-gender .gender-fields {
-	width: 150px;
-}
-
-.form-container .new-book .gender .add-gender .submit-gender {
-	height: 43px;
-	width: 40px;
-	border: none;
-	background-color: var(--main-blue);
-	color: #fff;
-	cursor: pointer;
-	font-size: 22px;
-	font-weight: 600;
-}*/
-
-
 /*--------- BOOKS --------*/
 .table-container {
 	text-align: left;
@@ -308,9 +281,7 @@ a.active::after {
 }
 
 .table-container td {
-	//border: 1px solid #005277;
 	border: none;
-	/*border-bottom: 1px solid rgba(0,0,0,0.1);*/
 	border-collapse: collapse;
 	padding: 10px;
 	font-size: 14px;
@@ -348,8 +319,6 @@ a.active::after {
 	border: none;
 	outline: none;
 }
-
-
 
 .form-container .new-book select {
 	padding: 10px;
@@ -443,7 +412,6 @@ a.active::after {
 
 
 /* --- LOGIN --- */
-
 .login-body {
 	width: 100%;
 	height: 100vh;
