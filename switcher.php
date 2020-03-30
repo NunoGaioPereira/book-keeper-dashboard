@@ -10,6 +10,9 @@
 
 		body {
 			font-family: 'Montserrat', sans-serif;
+			color: var(--text);
+			background: var(--bg);
+			transition: background 500ms ease-in-out, colos 1000ms ease-in-out;
 		}
 
 		ul {
@@ -24,8 +27,8 @@
 		.navbar {
 			height: 70px;
 			width: 100%;
-			background: black;
-			color: white;
+			background: var(--bg-nav);
+    color: var(--text);
 		}
 
 		.navbar-nav {
@@ -37,7 +40,7 @@
 
 		header {
 			padding: 1em;
-			background-color: red;
+			background: var(--bg-nav);
 			margin-bottom: 1em;
 			padding-bottom: 3.5em;
 			text-align: center;
@@ -49,8 +52,8 @@
 			width: 500px;
 			opacity: 0;
 			z-index: 2;
-			background: blue;
-			border-top: 2px solid white;
+			background: var(--bg-dropdown);
+    border-top: 2px solid var(--border-color);
 
 			border-bottom-right-radius: 8px;
 			border-bottom-left-radius: 8px;
@@ -81,7 +84,7 @@
 		}
 		.dropdown-item a::before {
 			content: ' ';
-			border: 2px solid white;
+			border: 2px solid var(--border-color);
 			border-radius: 50%;
 			width: 2rem;
 			height: 2rem;
