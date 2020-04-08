@@ -2,6 +2,7 @@
 	session_start();
 	$page = "New Book";
 	require ("includes/nav.inc.php");
+	require ("includes/dbh.inc.php");
 ?>
 	<div class="main-wrapper">
 		<h2>Adicionar Livro</h2>
@@ -27,10 +28,25 @@
 					<div class="gender-input">
 						<label>Gênero</label>
 						<select>
-							<option>Fiction</option>
-							<option>Non-Fiction</option>
-							<option>Poesia</option>
-							<option>Divulgação científica</option>
+							<?php
+								try {
+									$sql = "SELECT * FROM genders";
+									$stmt = $conn->prepare($sql);
+									$stmt->execute();
+									if($stmt->rowCount() > 0)
+									{
+										$result = $stmt->fetchAll();
+
+										foreach($result as $row)
+										{	
+											echo "<option>".$row['gender']."</option>";
+										}
+									}
+								}
+								catch(PDOException $e) {
+								    echo "No categories found.";
+								}
+							?>
 						</select>
 						<a href="#/" class="add-gender">+</a>
 					</div>
@@ -45,14 +61,10 @@
 				<h3>Novo Gênero</h3>
 				<a href="#/" class="gender-popup-close" style="height: 18px;"><img src="./imgs/cross.png"></a>
 			</div>
-			<!-- <form method="POST"> -->
 				<p class="success">Gênero adicionado!</p>
 				<input type="text" id="new-gender-input" name="new-gender" placeholder="Novo Gênero">
 				<?php echo '<input type="submit" name="submit-gender" class="submit-gender" value="Criar Gênero" data-id="'.$_SESSION['user_id'].'" data-role="add-gender">' ?>
-				<!-- <input type="submit" class="submit-gender" value="Criar Gênero"> -->
-			<!-- </form> -->
 		</div>
-
 	</div>
 
 	<script src="js/main.js"></script>
