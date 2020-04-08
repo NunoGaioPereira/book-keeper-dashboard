@@ -3,6 +3,7 @@
 	// require ("includes/dbh.inc.php");
 if(isset($_POST['submit'])) {
 
+    // Handle image field
 	if($_FILES['image']['size'] != 0 && $_FILES['image']['error'] == 0) {
 		$file  = $_FILES['image'];
 
@@ -40,8 +41,14 @@ if(isset($_POST['submit'])) {
 		$imgName = "default.jpg";
 	}
 
+	if(empty($_POST['title']) || empty($_POST['author']) || empty($_POST['nationality']) || empty($_POST['book_date'])) {
+		// header("Location: ../add_concert.php?error=emptyfields");
+		header("Location: ../new_book.php?error=emptyfields&title=".$_POST['title']."&author=".$_POST['author']."&nat=".$_POST['nationality']."&book_date=".$_POST['book_date']."");
+	}
+
 }
 else {
 	header("Location: ../new_book.php");
+	exit();
 }
 ?>

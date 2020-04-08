@@ -22,7 +22,7 @@
 				<input type="text" name="nationality" placeholder="Nacionalidade">
 
 				<label>Data</label>
-				<input type="text" name="gender" placeholder="Gênero">
+				<input type="date" name="book_date" placeholder="Date">
 
 				<div class="gender">
 					<div class="gender-input">
