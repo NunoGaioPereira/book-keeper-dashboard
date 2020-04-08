@@ -471,7 +471,7 @@ a.active::after {
 	color: var(--main-blue);
 }
 
-.login-body .login-form-container form .error-msg {
+.login-body .login-form-container form .error-msg, .form-container form .error-msg  {
 	color: red;
 	margin-bottom: 5px;
 }

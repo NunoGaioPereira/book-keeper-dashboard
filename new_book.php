@@ -9,6 +9,21 @@
 		<p>Mais um para a coleção!</p>
 		<div class="form-container">
 			<form class="new-book" method="POST" action="./includes/upload.inc.php" enctype="multipart/form-data">
+				<?php
+					if(isset($_GET["error"])) {
+						if($_GET["error"] == "emptyfields") {
+							echo "<p class=\"error-msg\">Faça o favor de preenhcer os campos todos</p>";
+						}
+					}
+					else if(isset($_GET["create"])) {
+						if($_GET["create"] == "success") {
+							echo "<p style=\"color: green\" class=\"error-msg\">Concerto criado!</p>";	
+						}
+						else if($_GET["create"] == "error") {
+							echo "<p class=\"error-msg\">O concerto não foi criado, por favor contactar o mestre do site.</p>";
+						}
+					}
+				?>
 				<label>Capa</label>
 				<input type="file" name="image" accept="image/*" capture="user">
 
