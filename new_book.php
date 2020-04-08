@@ -13,16 +13,16 @@
 				<input type="file" name="image" accept="image/*" capture="user">
 
 				<label>Título</label>
-				<input type="text" name="title" placeholder="Título">
+				<input type="text" name="title" placeholder="Título" value="<?php if(isset($_GET['title'])) echo $_GET['title'] ?>">
 
 				<label>Autor</label>
-				<input type="text" name="author" placeholder="Autor">
+				<input type="text" name="author" placeholder="Autor" value="<?php if(isset($_GET['author'])) echo $_GET['author'] ?>">
 
 				<label>Nacionalidade</label>
-				<input type="text" name="nationality" placeholder="Nacionalidade">
+				<input type="text" name="nationality" placeholder="Nacionalidade" value="<?php if(isset($_GET['nationality'])) echo $_GET['nationality'] ?>">
 
 				<label>Data</label>
-				<input type="date" name="book_date" placeholder="Date">
+				<input type="date" name="book_date" placeholder="Date" value="<?php if(isset($_GET['book_date'])) echo $_GET['book_date'] ?>">
 
 				<div class="gender">
 					<div class="gender-input">
