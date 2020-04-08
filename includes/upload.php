@@ -1,6 +1,7 @@
 <?php 
-	session_start();
-	// require ("includes/dbh.inc.php");
+session_start();
+require ("./dbh.inc.php");
+
 if(isset($_POST['submit'])) {
 
     // Handle image field
@@ -43,7 +44,22 @@ if(isset($_POST['submit'])) {
 
 	if(empty($_POST['title']) || empty($_POST['author']) || empty($_POST['nationality']) || empty($_POST['book_date'])) {
 		// header("Location: ../add_concert.php?error=emptyfields");
-		header("Location: ../new_book.php?error=emptyfields&title=".$_POST['title']."&author=".$_POST['author']."&nat=".$_POST['nationality']."&book_date=".$_POST['book_date']."");
+		header("Location: ../new_book.php?error=emptyfields&title=".$_POST['title']."&author=".$_POST['author']."&nationality=".$_POST['nationality']."&book_date=".$_POST['book_date']."");
+	}
+	else {
+		try {
+			$title = cleanInput($_POST['title']);
+			$author = cleanInput($_POST['author']);
+			$nationality = cleanInput($_POST['nationality']);
+			$date = cleanInput($_POST['book_date']);
+			$gender = cleanInput($_POST['gender']);
+		}
+		catch(PDOException $e){
+			header("Location: ../add_concert.php?create=error");
+			// $conn->rollback();
+			throw $e;
+			exit();
+		}
 	}
 
 }

@@ -27,7 +27,7 @@
 				<div class="gender">
 					<div class="gender-input">
 						<label>Gênero</label>
-						<select>
+						<select name="gender">
 							<?php
 								try {
 									$sql = "SELECT * FROM genders";
