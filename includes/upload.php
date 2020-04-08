@@ -3,7 +3,7 @@
 	// require ("includes/dbh.inc.php");
 if(isset($_POST['submit'])) {
 
-	if($_FILES['image']['size'] == 0 && $_FILES['image']['error'] == 0) {
+	if($_FILES['image']['size'] != 0 && $_FILES['image']['error'] == 0) {
 		$file  = $_FILES['image'];
 
 		$fileName = $file['name'];
@@ -26,20 +26,22 @@ if(isset($_POST['submit'])) {
 					$fileDestination = '../imgs/'.$fileNameNew;
 
 					move_uploaded_file($fileTmpName, $fileDestination);
-					header("Location: ../index.php?uploadsuccess");
+					header("Location: ../new_book.php?uploadsuccess");
 				} else {
-					header("Location: ../index.php?error=toobig");
+					header("Location: ../new_book.php?error=toobig");
 				}
 			} else {
-				header("Location: ../index.php?error=uploaderror");
+				header("Location: ../new_book.php?error=uploaderror");
 			}
 		} else {
-			header("Location: ../index.php?error=wrongtype");
+			header("Location: ../new_book.php?error=wrongtype");
 		}
 	} else {
 		$imgName = "default.jpg";
-		// echo $imgName;
 	}
 
+}
+else {
+	header("Location: ../new_book.php");
 }
 ?>
