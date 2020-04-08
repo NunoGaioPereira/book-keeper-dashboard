@@ -8,7 +8,7 @@
 		<h2>Adicionar Livro</h2>
 		<p>Mais um para a coleção!</p>
 		<div class="form-container">
-			<form class="new-book" method="POST" action="./includes/upload.php" enctype="multipart/form-data">
+			<form class="new-book" method="POST" action="./includes/upload.inc.php" enctype="multipart/form-data">
 				<label>Capa</label>
 				<input type="file" name="image" accept="image/*" capture="user">
 
