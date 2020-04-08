@@ -53,6 +53,17 @@ if(isset($_POST['submit'])) {
 			$nationality = cleanInput($_POST['nationality']);
 			$date = cleanInput($_POST['book_date']);
 			$gender = cleanInput($_POST['gender']);
+			$userId = cleanInput($_POST['userId']);
+
+			$sql = "INSERT INTO books(userid, title, author, nationality, gender, date_) VALUES(?, ?, ?, ?, ?, ?)";
+			$stmt = $conn->prepare($sql);
+			$stmt->bindParam(1, $userId);
+			$stmt->bindParam(2, $title);
+			$stmt->bindParam(3, $author);
+			$stmt->bindParam(4, $nationality);
+			$stmt->bindParam(5, $gender);
+			$stmt->bindParam(6, $date_);
+			// $stmt->execute();
 		}
 		catch(PDOException $e){
 			header("Location: ../add_concert.php?create=error");
