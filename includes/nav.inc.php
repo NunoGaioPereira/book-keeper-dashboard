@@ -28,6 +28,7 @@
 		<img id="hamb" src="./imgs/hamb.png">
 	</div>
 	<div id="mobile-nav">
+		<img id="close-nav" src="./imgs/cross.png">
 		<ul>
 			<li><a href="./">Home</a></li>
 			<li><a href="./books.php">Livros</a></li>
@@ -60,5 +61,10 @@
 	nav_cover.addEventListener('click', function(){
 		document.getElementById("mobile-nav").classList.toggle('open');
 		nav_cover.classList.toggle('open');
+	});
+	var nav_close = document.getElementById("close-nav");
+	nav_close.addEventListener('click', function(){
+		document.getElementById("mobile-nav").classList.toggle('open');
+		document.getElementById("nav-cover").classList.toggle('open');
 	});
 </script>

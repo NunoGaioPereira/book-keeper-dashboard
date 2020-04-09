@@ -466,6 +466,14 @@ a.active::after {
 	background-color: #efefef;
 }
 
+#close-nav {
+	width: 25px;
+	cursor: pointer;
+	margin: 10px 10px 0 0;
+	right: 0;
+	position: absolute;
+}
+
 /* --- LOGIN --- */
 .login-body {
 	width: 100%;
