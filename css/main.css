@@ -475,3 +475,25 @@ a.active::after {
 	color: red;
 	margin-bottom: 5px;
 }
+
+@media only screen and (max-width: 768px) {
+	#side-nav {
+		height: 60px;
+		width: 100%;
+		flex-direction: row;
+		padding: 0 20px;
+	}
+
+	#side-nav ul, #side-nav form {
+		display: none;
+	}
+
+	#side-nav .logo a img {
+		width: 40px;
+	}
+
+	.main-wrapper {
+		margin-left: 0;
+		margin-top: 60px;
+	}
+}
