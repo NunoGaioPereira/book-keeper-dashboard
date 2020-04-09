@@ -72,6 +72,12 @@ a {
 	position: relative;
 }
 
+#side-nav #hamb {
+	width: 35px;
+	cursor: pointer;
+	display: none;
+}
+
 /*#side-nav ul a.active {
 	border-right: 3px solid var(--main-blue);
 	padding-left: 7px;
@@ -490,6 +496,10 @@ a.active::after {
 
 	#side-nav .logo a img {
 		width: 40px;
+	}
+
+	#side-nav #hamb {
+		display: block;
 	}
 
 	.main-wrapper {

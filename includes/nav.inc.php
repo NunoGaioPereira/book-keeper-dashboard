@@ -24,4 +24,5 @@
 		<form class="logout" action="./includes/logout.inc.php">
 			<button><img src="./imgs/logout.png"></button>
 		</form>
+		<img id="hamb" src="./imgs/hamb.png">
 	</div>
