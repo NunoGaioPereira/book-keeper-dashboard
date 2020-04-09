@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div id="cover"></div>
+	<div id="nav-cover"></div>
 	
 	<div id="side-nav">
 		<div class="logo">
@@ -26,3 +27,38 @@
 		</form>
 		<img id="hamb" src="./imgs/hamb.png">
 	</div>
+	<div id="mobile-nav">
+		<ul>
+			<li><a href="./">Home</a></li>
+			<li><a href="./books.php">Livros</a></li>
+			<li><a href="./new_book.php">Novo Livro</a></li>
+			<li><a href="./notes.php">Notas</a></li>
+		</ul>
+		<form action="./includes/logout.inc.php">
+			<button>Logout</button>
+		</form>
+	</div>
+
+<script type="text/javascript">
+	// $(document).ready(function(){
+	// 	const hamb = document.getElementById(hamb);
+	// 	hamb.addEventListener('click', function() {
+	// 		console.log("test");
+	// 	});
+	// });
+	// $(document).ready(function(){
+	// 		$(document).on('click', '#hamb', function() {
+
+	// 		});
+	// 	});
+	var hamb = document.getElementById("hamb");
+	hamb.addEventListener('click', function(){
+		document.getElementById("mobile-nav").classList.toggle('open');
+		document.getElementById("nav-cover").classList.toggle('open');
+	});
+	var nav_cover = document.getElementById("nav-cover");
+	nav_cover.addEventListener('click', function(){
+		document.getElementById("mobile-nav").classList.toggle('open');
+		nav_cover.classList.toggle('open');
+	});
+</script>

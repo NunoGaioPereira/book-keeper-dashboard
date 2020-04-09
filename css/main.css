@@ -398,7 +398,7 @@ a.active::after {
 	color: red;
 }
 
-#cover {
+#cover, #nav-cover {
 	width: 100vw;
 	height: 100vh;
 	z-index: 8;
@@ -411,11 +411,60 @@ a.active::after {
 	transition: opacity 0.1s ease-in-out;
 }
 
-#cover.open {
+#nav-cover {
+	backdrop-filter: blur(3px);
+}
+
+#cover.open, #nav-cover.open {
 	display: initial;
 	opacity: 1;
 }
 
+
+#mobile-nav {
+	position: fixed;
+	top: 0;
+	left: -200px;
+	height: 100%;
+	background-color: #fff;
+	z-index: 99;
+	max-width: 200px;
+	width: 100%;
+	transition: left 0.2s ease-in-out;
+	display: none;
+}
+
+#mobile-nav.open {
+	left: 0;
+}
+
+#mobile-nav ul {
+	margin-top: 50px;
+}
+
+#mobile-nav ul li a {
+	width: 100%;
+	padding: 10px 20px;
+	display: block;
+	font-weight: 500;
+}
+
+#mobile-nav form button {
+	width: 100%;
+	display: block;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	background-color: #fff;
+	padding: 10px 20px;
+	text-align: left;
+	border: none;
+	font-size: 15px;
+}
+
+#mobile-nav ul li a:hover, #mobile-nav form button:hover {
+	background-color: #efefef;
+}
 
 /* --- LOGIN --- */
 .login-body {
@@ -498,7 +547,7 @@ a.active::after {
 		width: 40px;
 	}
 
-	#side-nav #hamb {
+	#side-nav #hamb, #mobile-nav {
 		display: block;
 	}
 
