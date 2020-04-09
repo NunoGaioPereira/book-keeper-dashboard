@@ -41,17 +41,6 @@
 	</div>
 
 <script type="text/javascript">
-	// $(document).ready(function(){
-	// 	const hamb = document.getElementById(hamb);
-	// 	hamb.addEventListener('click', function() {
-	// 		console.log("test");
-	// 	});
-	// });
-	// $(document).ready(function(){
-	// 		$(document).on('click', '#hamb', function() {
-
-	// 		});
-	// 	});
 	var hamb = document.getElementById("hamb");
 	hamb.addEventListener('click', function(){
 		document.getElementById("mobile-nav").classList.toggle('open');
