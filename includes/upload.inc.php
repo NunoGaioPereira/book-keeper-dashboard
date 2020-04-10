@@ -87,14 +87,11 @@ if(isset($_POST['submit'])) {
 			$stmt->bindParam(5, $gender);
 			$stmt->bindParam(6, $date);
 			$stmt->bindParam(7, $fileNameNew);
-			// $stmt->execute();
-
-			echo "Success!";
+			$stmt->execute();
+			header("Location: ../booknotes.php?book=".$book_id."");
 		}
 		catch(PDOException $e){
-			// header("Location: ../add_concert.php?create=error");
-			// $conn->rollback();
-			echo $e;
+			header("Location: ../new_book.php?create=error");
 			throw $e;
 			exit();
 		}
