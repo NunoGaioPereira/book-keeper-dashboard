@@ -168,10 +168,17 @@ a.active::after {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	/*border-left: 4px solid var(--main-color);
+	margin-bottom: 2px;*/
+}
+
+.readlist .list-container .book a:hover > .text h4 {
+	color: var(--main-color);
 }
 
 .readlist .list-container .book h4 {
 	font-size: 17px;
+	transition: color 0.1s ease-in-out;
 }
 
 .readlist .list-container .book h5 {
