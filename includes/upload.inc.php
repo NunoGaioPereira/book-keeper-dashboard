@@ -42,7 +42,8 @@ if(isset($_POST['submit'])) {
 						}
 						// $fileNameNew = uniqid('', true).".".$fileActuelExt;
 						// $fileNameNew = $_SESSION['user_id'].$book_id.".".$fileActuelExt;
-						$fileNameNew = $_SESSION['user_id']."_".$book_id.".".$fileActuelExt;
+						// $fileNameNew = $_SESSION['user_id']."_".$book_id.".".$fileActuelExt;
+						$fileNameNew = $_SESSION['user_id']."_".$book_id.".png";
 						// $fileNameNew = $_SESSION['user_id']."_".".".$fileActuelExt;
 						$fileDestination = '../imgs/books/'.$fileNameNew;
 
