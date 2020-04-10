@@ -127,6 +127,8 @@ a.active::after {
 	background-color: #fff;
 	border-radius: 10px;
 	max-width: 300px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	height: 310px;
 }
 
 .readlist .header {
@@ -134,6 +136,7 @@ a.active::after {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	box-shadow: 0 4px 5px -3px rgba(0, 0, 0, 0.1);
 }
 
 .readlist .header h3 {
@@ -142,7 +145,7 @@ a.active::after {
 
 .readlist .header a {
 	color: #fff;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 25px;
 	background-color: var(--main-color);
 	border-radius: 50%;
@@ -151,6 +154,48 @@ a.active::after {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.readlist .list-container {
+	width: 100%;
+	overflow-y: scroll;
+	max-height: 239px;
+}
+
+.readlist .list-container .book {
+	padding: 10px 15px;
+	border-bottom: 1px solid #ececec;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.readlist .list-container .book h4 {
+	font-size: 17px;
+}
+
+.readlist .list-container .book h5 {
+	color: #808080;
+	font-weight: 500;
+}
+
+.readlist .list-container .book img {
+	width: 25px;
+	cursor: pointer;
+}
+
+.readlist .list-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.readlist .list-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  /*background-color: #ececec;*/
+}
+
+.readlist .list-container::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
 }
 
 /*-- /HOME --*/

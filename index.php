@@ -13,7 +13,78 @@
 				<a href="#/">+</a>
 			</div>
 			<div class="list-container">
-				
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
+				<div class="book">
+					<a href="">
+						<div class="text">
+							<h4>O Processo</h4>
+							<h5>Franz Kafka</h5>
+						</div>
+					</a>
+					<img src="./imgs/trash.png">
+				</div>
 			</div>
 		</div>
 	</div>
