@@ -35,6 +35,7 @@ a {
 #side-nav {
 	background-color: #fff;
 	width: var(--side-nav-width);
+	z-index: 80;
 	height: 100vh;
 	position: fixed;
 	padding: 20px 0;
@@ -279,7 +280,6 @@ a.active::after {
 .form-container .new-book {
 	max-width: 640px;
 	margin: 20px auto;
-	padding: 0 20px;
 }
 
 .form-container .new-book label {
@@ -287,7 +287,6 @@ a.active::after {
 	color: var(--main-color);
 	font-weight: 600;
 	margin-bottom: 4px;
-	font-size: 
 }
 
 .form-container .new-book input {
@@ -313,6 +312,20 @@ a.active::after {
 .form-container .new-book .btn-submit:hover {
 	color: #fff;
 	background-color: var(--main-color);
+}
+
+.form-container .new-book input[type="file" i] {
+	display: none;
+}
+
+.form-container .new-book .file-upload {
+	margin: 0 0 20px 0;
+	color: #777;
+	/*color: #fff;*/
+	/*padding: 6px 10px;*/
+	width: 160px;
+	/*background-color: var(--main-color);*/
+	cursor: pointer;
 }
 
 /*--------- BOOKS --------*/
