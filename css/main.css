@@ -554,6 +554,7 @@ a.active::after {
 	text-align: left;
 	border: none;
 	font-size: 15px;
+	color: var(--main-color);
 }
 
 #mobile-nav ul li a:hover, #mobile-nav form button:hover {
@@ -561,7 +562,7 @@ a.active::after {
 }
 
 #close-nav {
-	width: 25px;
+	width: 22px;
 	cursor: pointer;
 	margin: 10px 10px 0 0;
 	right: 0;
@@ -656,5 +657,22 @@ a.active::after {
 	.main-wrapper {
 		margin-left: 0;
 		margin-top: 60px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.notes-container .book { flex-direction: column; }
+
+	.notes-container .book img {
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+
+	.notes-container .book .book-info {
+		text-align: center;
+	}
+
+	.notes-container .book .book-info a {
+		margin: 0 auto;
 	}
 }
