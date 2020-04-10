@@ -5,25 +5,22 @@
 	require ("includes/dbh.inc.php");
 ?>
 
-<link rel="stylesheet" type="text/css" href="./includes/croppie.css">
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script src="./includes/croppie.js"></script>
-
+<link rel="stylesheet" type="text/css" href="./css/croppie.css">
+<script src="./js/croppie.js"></script>
 
 	<div class="main-wrapper">
 		<h2>Adicionar Livro</h2>
 		<p>Mais um para a coleção!</p>
 		<div class="form-container">
-			<div class="new-book">
-			<!-- <form class="new-book" method="POST" action="./includes/upload.inc.php" enctype="multipart/form-data"> -->
+			<!-- <div class="new-book"> -->
+			<form class="new-book" method="POST" action="./includes/upload.inc.php" enctype="multipart/form-data">
 				<?php
 					if(isset($_GET["error"])) {
 						if($_GET["error"] == "emptyfields") {
 							echo "<p class=\"error-msg\">Faça o favor de preenhcer os campos todos</p>";
+						}
+						else if($_GET["error"] == "toobig") {
+							echo "<p class=\"error-msg\">Imagem demasiado grande</p>";
 						}
 					}
 					else if(isset($_GET["create"])) {
@@ -41,34 +38,8 @@
 				<label>Capa</label>
 				<label for="upload_image" class="file-upload">Escolher ficheiro</label>
 				<input type="file" id="upload_image" name="upload_image" accept="image/*" capture="user">
-				<div id="uploaded_image"></div>
 
-				<div id="uploadimageModal" class="modal" role="dialog">
-				 <div class="modal-dialog">
-				  <div class="modal-content">
-				        <div class="modal-header">
-				          <button type="button" class="close" data-dismiss="modal">&times;</button>
-				          <h4 class="modal-title">Upload and Crop Image</h4>
-				        </div>
-				        <div class="modal-body">
-				          <div class="row">
-				       <div class="col-md-8 text-center">
-				        <div id="image_demo" style="width:350px; margin-top:30px"></div>
-				       </div>
-				       <div class="col-md-4" style="padding-top:30px;">
-				        <br />
-				        <br />
-				        <br/>
-				        <button class="btn btn-success crop_image">Crop and Upload Image</button>
-				     </div>
-				    </div>
-				        </div>
-				        <div class="modal-footer">
-				          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				        </div>
-				     </div>
-				    </div>
-				</div>
+				<div id="uploaded_image"></div>
 
 				<label>Título</label>
 				<input type="text" name="title" placeholder="Título" value="<?php if(isset($_GET['title'])) echo $_GET['title'] ?>">
@@ -111,8 +82,19 @@
 				</div>
 
 				<input type="submit" class="btn-submit" name="submit" value="Adicionar Livro">
-			<!-- </form> -->
-			</div>
+			</form>
+			<!-- </div> -->
+		</div>
+
+		<div id="uploadimageModal" class="modal" >
+		  	<div class="modal-content">
+		        <div class="modal-header">
+		         	<h4 class="modal-title">Recortar Imagem</h4>
+		         	<img src="./imgs/cross.png" id="close-modal">
+		        </div>
+	        	<div id="image_demo" style="max-width:98%; margin-top:30px"></div>
+           		<p><a class="crop_image">Upload</a></p>
+		    </div>
 		</div>
 
 		<div id="gender-popup">
@@ -126,7 +108,7 @@
 		</div>
 	</div>
 
-	<!-- <script src="js/main.js"></script> -->
+	<script src="js/main.js"></script>
 	<script>
 		$(document).ready(function(){
 			$(document).on('click', '.submit-gender', function() {
@@ -149,7 +131,6 @@
 							else if (data == "s"){
 								alert("Gênero criado!")
 							}
-							// $("#musicians-table").load("./includes/update_pieces.inc.php", {id: id, action: 'fill-musicians-table'});
 						}
 					})
 				}
@@ -157,19 +138,33 @@
 		});
 	</script>
 
-	<!-- <script src="./includes/croppie.js"></script> -->
 	<script>  
+
+
+		function openModal() {
+			var modal = document.getElementById("uploadimageModal");
+			document.getElementById("cover").classList.toggle('open');
+			modal.classList.toggle('show');
+		}
+
+		var close_modal = document.getElementById("close-modal");
+		close_modal.addEventListener('click', function(){
+			document.getElementById("cover").classList.toggle('open');uploadimageModal
+			document.getElementById("uploadimageModal").classList.toggle('show');
+		});
+
 		$(document).ready(function(){
 
 		 $image_crop = $('#image_demo').croppie({
-		    enableExif: true,
+		    // enableExif: true,
+		    mouseWheelZoom: false,
 		    viewport: {
 		      width:200,
 		      height:270,
 		      type:'square'
 		    },
 		    boundary:{
-		      width:300,
+		      width:260,
 		      height:300
 		    }
 		  });
@@ -180,15 +175,15 @@
 		      $image_crop.croppie('bind', {
 		        url: event.target.result
 		      }).then(function(){
-		        console.log('jQuery bind complete');
+		        // console.log('jQuery bind complete');
 		      });
 		    }
 		    reader.readAsDataURL(this.files[0]);
-		    $('#uploadimageModal').modal('show');
+		    // $('#uploadimageModal').modal('show');
+		    openModal();
 		  });
 
 		  $('.crop_image').click(function(event){
-		  	console.log("Got here");
 		    $image_crop.croppie('result', {
 		      type: 'canvas',
 		      size: 'viewport'
@@ -199,7 +194,8 @@
 		        data:{"image": response},
 		        success:function(data)
 		        {
-		          $('#uploadimageModal').modal('hide');
+		          // $('#uploadimageModal').modal('hide');
+		          openModal();
 		          $('#uploaded_image').html(data);
 		        }
 		      });

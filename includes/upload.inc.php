@@ -5,8 +5,8 @@ require ("./dbh.inc.php");
 if(isset($_POST['submit'])) {
 
     // Handle image field
-	if($_FILES['image']['size'] != 0 && $_FILES['image']['error'] == 0) {
-		$file  = $_FILES['image'];
+	if($_FILES['upload_image']['size'] != 0 && $_FILES['upload_image']['error'] == 0) {
+		$file  = $_FILES['upload_image'];
 
 		$fileName = $file['name'];
 		$fileTmpName = $file['tmp_name'];
