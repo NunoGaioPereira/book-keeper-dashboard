@@ -123,10 +123,16 @@ a.active::after {
 
 /*-- HOME --*/
 
+.home-container {
+	display: flex;
+	margin: 20px 0;
+}
+
 .readlist {
 	background-color: #fff;
 	border-radius: 10px;
 	max-width: 300px;
+	min-width: 250px;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	height: 310px;
 }
