@@ -1,6 +1,4 @@
 <?php 
-	// require('includes/dbh.inc.php');
-
 	session_start();
 	if(isset($_SESSION['user_id'])) {
 		header("Location: ./index.php");
@@ -17,7 +15,6 @@
 <body>
 	<div class="login-body">
 		<div class="login-form-container">
-			<!-- <div class="login-header"><h3>Login</h3></div> -->
 			<img src="./imgs/logo.png">
 			<h2 class="login-title">Book Keeper</h2>
 			<form  method="POST" action="includes/login.inc.php">
