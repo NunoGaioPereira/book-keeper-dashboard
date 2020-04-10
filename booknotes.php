@@ -20,16 +20,22 @@
 			$stmt->bindParam(1, $book_id);
 			$stmt->execute();
 			$book = $stmt->fetch();
-			// echo '<p>Título: '.$book['title'].'<p/>';
-			// echo '<p>Autor: '.$book['author'].'<p/>';
-			// echo '<p>Nacionalidade: '.$book['nationality'].'<p/>';
-			// echo '<p>Gênero: '.$book['gender'].'<p/>';
-			// echo '<p>Data: '.$book['date_'].'<p/>';
-			// echo '<p>Notas: '.$book['notes'].'<p/>';
 		?>
-		<div class="booknotes">
-			<h3></h3>
-			<img src="<?php echo './imgs/books/'.$book['img'].''; ?>"/>
+		<div class="booknotes">	
+			<div class="top">
+				<img src="<?php echo './imgs/books/'.$book['img'].''; ?>"/>
+				<div class="book-info">
+					<p><span>Título: </span><?php echo $book['title']?></p>
+					<p><span>Autor: </span><?php echo $book['author']?></p>
+					<p><span>Nacionalidade: </span><?php echo $book['nationality']?></p>
+					<p><span>Gênero: </span><?php echo $book['gender']?></p>
+					<p><span>Data: </span><?php echo $book['date_']?></p>
+				</div>
+			</div>
+			<div class="notes-container">
+				<h4>Notas</h4>
+				<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
+			</div>
 		</div>
 	</div>
 </body>

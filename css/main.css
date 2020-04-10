@@ -328,6 +328,80 @@ a.active::after {
 	cursor: pointer;
 }
 
+
+/*----- BOOKNOTES -----*/
+.booknotes {
+	margin: 20px 0;
+	/*text-align: center;*/
+}
+
+.booknotes img {
+	width: 200px;
+}
+
+.booknotes .top {
+	display: flex;
+	max-width: 800px;
+	margin: 0 auto 20px;
+}
+
+.booknotes .top .book-info {
+	margin-left: 20px;
+}
+
+.booknotes .top .book-info p {
+	margin-bottom: 10px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.booknotes .top .book-info p span {
+	color: var(--main-color);
+	font-weight: 600;
+}
+
+.booknotes .notes-container {
+	max-width: 800px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.booknotes .notes-container h4 {
+	margin-bottom: 3px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.booknotes .notes {
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	min-height: 300px;
+	max-height: 450px;
+	overflow-y: scroll;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.booknotes .notes:focus {
+	outline: 3px solid #eee;
+}
+
+.booknotes .notes::-webkit-scrollbar {
+  width: 5px;
+}
+
+.booknotes .notes::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.booknotes .notes::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+
 /*--------- BOOKS --------*/
 .table-container {
 	text-align: left;
