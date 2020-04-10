@@ -44,7 +44,7 @@ if(isset($_POST['submit'])) {
 						// $fileNameNew = $_SESSION['user_id'].$book_id.".".$fileActuelExt;
 						$fileNameNew = $_SESSION['user_id']."_".$book_id.".".$fileActuelExt;
 						// $fileNameNew = $_SESSION['user_id']."_".".".$fileActuelExt;
-						$fileDestination = '../imgs/'.$fileNameNew;
+						$fileDestination = '../imgs/books/'.$fileNameNew;
 
 						move_uploaded_file($fileTmpName, $fileDestination);
 						// header("Location: ../new_book.php?uploadsuccess");
