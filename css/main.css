@@ -1,5 +1,5 @@
 :root {
-	--main-blue: #227ee5;
+	--main-color: #227ee5;
 	--side-nav-width: 65px;
 	--background-color: #f8f7fc;
 	--moving-nav-color: #eaeaea;
@@ -9,7 +9,7 @@
 	--light-gray: #c3c3c3;
 }
 
-/*document.documentElement.style.setProperty('--main-blue', 'red');*/
+/*document.documentElement.style.setProperty('--main-color', 'red');*/
 
 * {
 	padding: 0;
@@ -79,7 +79,7 @@ a {
 }
 
 /*#side-nav ul a.active {
-	border-right: 3px solid var(--main-blue);
+	border-right: 3px solid var(--main-color);
 	padding-left: 7px;
 }*/
 
@@ -89,7 +89,7 @@ a.active::after {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    border-right: 7px solid var(--main-blue);
+    border-right: 7px solid var(--main-color);
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
 }
@@ -120,6 +120,42 @@ a.active::after {
 	width: 25px;
 }
 
+
+/*-- HOME --*/
+
+.readlist {
+	background-color: #fff;
+	border-radius: 10px;
+	max-width: 300px;
+}
+
+.readlist .header {
+	padding: 15px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.readlist .header h3 {
+	font-size: 22px;
+}
+
+.readlist .header a {
+	color: #fff;
+	font-weight: 600;
+	font-size: 25px;
+	background-color: var(--main-color);
+	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-- /HOME --*/
+
+/*- ---- */
 .notes-container {
 	margin: 30px 0;
 }
@@ -135,7 +171,7 @@ a.active::after {
 }
 
 .notes-container .book .book-info h3 {
-	color: var(--main-blue);
+	color: var(--main-color);
 }
 
 .notes-container .book .book-info h4 {
@@ -149,17 +185,17 @@ a.active::after {
 
 .notes-container .book .book-info a {
 	display: block;
-	color: var(--main-blue);
+	color: var(--main-color);
 	padding: 10px 20px;
 	width: 140px;
 	font-weight: 600;
 	/*margin-top: 20px;*/
-	border: 2px solid var(--main-blue);
+	border: 2px solid var(--main-color);
 	transition: all 0.2s ease-in-out;
 }
 
 .notes-container .book .book-info a:hover {
-	background-color: var(--main-blue);
+	background-color: var(--main-color);
 	color: #fff;
 }
 
@@ -190,7 +226,7 @@ a.active::after {
 
 .form-container .new-book label {
 	display: block;
-	color: var(--main-blue);
+	color: var(--main-color);
 	font-weight: 600;
 	margin-bottom: 4px;
 	font-size: 
@@ -201,14 +237,14 @@ a.active::after {
 	padding: 10px;
 	font-size: 16px;
 	margin-bottom: 15px;
-	/*border: 2px solid var(--main-blue);*/
+	/*border: 2px solid var(--main-color);*/
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 }
 
 .form-container .new-book .btn-submit {
-	color: var(--main-blue);
-	border: 2px solid var(--main-blue);
+	color: var(--main-color);
+	border: 2px solid var(--main-color);
 	transition: all 0.25s ease-in-out;
 	background-color: #fff;
 	cursor: pointer;
@@ -218,7 +254,7 @@ a.active::after {
 
 .form-container .new-book .btn-submit:hover {
 	color: #fff;
-	background-color: var(--main-blue);
+	background-color: var(--main-color);
 }
 
 /*--------- BOOKS --------*/
@@ -243,7 +279,7 @@ a.active::after {
 }
 
 .table-container table th {
-	background-color: var(--main-blue);
+	background-color: var(--main-color);
 	color: #fff;
 	position: sticky;
 	top: 0;
@@ -253,7 +289,7 @@ a.active::after {
 
 .table-container .table-header {
 	padding-right: 5px;
-	background-color: var(--main-blue);
+	background-color: var(--main-color);
 }
 
 .table-container th, .table-container table, .table-container tr, .table-container td {
@@ -305,7 +341,7 @@ a.active::after {
 }
 
 .table-container .table-content::-webkit-scrollbar-thumb {
-  background-color: var(--main-blue);
+  background-color: var(--main-color);
   outline: 1px solid slategrey;
   border-radius: 10px;
 }
@@ -334,7 +370,7 @@ a.active::after {
 
 .form-container .new-book .add-gender {
 	color: #fff;
-	background-color: var(--main-blue);
+	background-color: var(--main-color);
 	display: inline-block;
 	padding: 10px 14px;
 }
@@ -380,7 +416,7 @@ a.active::after {
 #gender-popup .submit-gender {
 	border: none;
 	color: #fff;
-	background-color: var(--main-blue);
+	background-color: var(--main-color);
 	cursor: pointer;
 	margin-top: 10px;
 	padding: 10px;
@@ -518,7 +554,7 @@ a.active::after {
 	margin: 10px 0 20px;
     cursor: pointer;
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-    background-color: var(--main-blue);
+    background-color: var(--main-color);
     color: #fff;
     font-weight: bold;
     width: 100%;
@@ -526,12 +562,12 @@ a.active::after {
     border-radius: 2px;
     padding: 11px 12px;
     font-size: 16px;
-    border: 2px solid var(--main-blue);
+    border: 2px solid var(--main-color);
 }
 
 .login-body .login-form-container form .login-btn:hover {
 	background-color: #fff;
-	color: var(--main-blue);
+	color: var(--main-color);
 }
 
 .login-body .login-form-container form .error-msg, .form-container form .error-msg  {
