@@ -336,13 +336,13 @@ a.active::after {
 }
 
 .booknotes img {
-	width: 200px;
+	height: 450px;
 }
 
 .booknotes .top {
 	display: flex;
-	max-width: 800px;
-	margin: 0 auto 20px;
+	max-width: 1200px;
+	/*margin: 0 auto;*/
 }
 
 .booknotes .top .book-info {
@@ -360,31 +360,30 @@ a.active::after {
 	font-weight: 600;
 }
 
-.booknotes .notes-container {
-	max-width: 800px;
-	text-align: left;
-	margin: 0 auto;
-}
-
-.booknotes .notes-container h4 {
+.booknotes .book-info h4 {
 	margin-bottom: 3px;
-	font-size: 20px;
+	color: var(--main-color);
 	font-weight: 600;
+	font-size: 18px;
 }
 
 .booknotes .notes {
-	padding: 10px;
+	/*padding: 10px;*/
 	border-radius: 5px;
-	width: 100%;
-	min-height: 300px;
-	max-height: 450px;
-	overflow-y: scroll;
-	margin: 0 auto;
-	background-color: #fff;
+	width: calc(100vw - 450px);
+	max-height: 263px;
+	height: 263px;
+	/*max-height: 450px;*/
+	overflow-y: hidden;
+	overflow-x: hidden;
+	/*margin: 0 auto;*/
+	background-color: var(--background-color);
 }
 
 .booknotes .notes:focus {
 	outline: 3px solid #eee;
+	background-color: #fff;
+	overflow-y: scroll;
 }
 
 .booknotes .notes::-webkit-scrollbar {
@@ -393,7 +392,7 @@ a.active::after {
 
 .booknotes .notes::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 .booknotes .notes::-webkit-scrollbar-thumb {
@@ -798,6 +797,10 @@ a.active::after {
 	.main-wrapper {
 		margin-left: 0;
 		margin-top: 60px;
+	}
+
+	.booknotes .notes {
+		width: calc(100vw - 400px);
 	}
 }
 

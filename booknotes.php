@@ -30,12 +30,14 @@
 					<p><span>Nacionalidade: </span><?php echo $book['nationality']?></p>
 					<p><span>Gênero: </span><?php echo $book['gender']?></p>
 					<p><span>Data: </span><?php echo $book['date_']?></p>
+					<h4>Notas</h4>
+					<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
 				</div>
 			</div>
-			<div class="notes-container">
+			<!-- <div class="notes-container">
 				<h4>Notas</h4>
 				<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </body>
