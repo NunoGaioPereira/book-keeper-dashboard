@@ -270,6 +270,18 @@ a.active::after {
 	/*height: 220px;*/
 }
 
+#search-bar {
+	padding: 8px 15px;
+	margin-right: 30px;
+	margin-top: 10px;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+#search-bar:focus, #search-bar:active {
+	border: none;
+	outline: none;
+}
 
 
 /*------ NEW BOOK --------*/
@@ -492,7 +504,7 @@ a.active::after {
 }
 
 .table-container .header {
-	margin: 5px 0 15px;
+	margin: -20px 0 25px;
 }
 
 .table-container .header input {

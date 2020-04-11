@@ -41,6 +41,7 @@
 							<td>2020</td>
 							<td class="actions">
 								<a href="#/"><img src="./imgs/eye.png"></a>
+								<a href="#/"><img src="./imgs/notes.png"></a>
 								<a href="#/"><img src="./imgs/trash.png"></a>
 							</td>
 						</tr>
@@ -49,7 +50,5 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="js/main.js"></script>
 </body>
 </html>

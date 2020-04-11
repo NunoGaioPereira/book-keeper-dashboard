@@ -7,6 +7,7 @@
 	<div class="main-wrapper">
 		<h2>Notes</h2>
 		<p>So you don't forget what you read</p>
+		<input type="text" id="search-bar" placeholder="Pesquisar">
 		<div class="notes-container">
 			<?php
 				$sql = "SELECT * FROM books WHERE userid = ? ";
