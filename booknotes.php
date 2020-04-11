@@ -30,6 +30,9 @@
 					<p><span>Nacionalidade: </span><?php echo $book['nationality']?></p>
 					<p><span>Gênero: </span><?php echo $book['gender']?></p>
 					<p><span>Data: </span><?php echo $book['date_']?></p>
+					<!--// Format numeric date
+					$dt = new DateTime($result['dateNum']);
+					$dt = $dt->format('Y-m-d');-->
 					<h4>Notas</h4>
 					<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
 				</div>
@@ -40,5 +43,23 @@
 			</div> -->
 		</div>
 	</div>
+
+	<script>
+		var notes = document.getElementById('notes-input');
+		notes.addEventListener('focusout', function() {
+			var notes_text = $(this).text();
+			let params = new URLSearchParams(location.search);
+			var book_id = params.get('book');
+			$.ajax({
+				url: "./includes/update_book.inc.php",
+				type: "POST",
+				cache: false,
+				data: {'action': 'save_notes', 'book_id': book_id, 'notes': notes_text},
+				success: function(msg){
+					alert(msg);
+				},
+			});
+		});
+	</script>
 </body>
 </html>

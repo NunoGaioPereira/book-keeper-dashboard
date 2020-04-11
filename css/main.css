@@ -370,7 +370,8 @@ a.active::after {
 .booknotes .notes {
 	/*padding: 10px;*/
 	border-radius: 5px;
-	width: calc(100vw - 450px);
+	max-width: calc(1200px - 320px);
+	width: calc(100vw - 480px);
 	max-height: 263px;
 	height: 263px;
 	/*max-height: 450px;*/
