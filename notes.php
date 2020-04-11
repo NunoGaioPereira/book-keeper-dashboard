@@ -9,7 +9,7 @@
 		<p>So you don't forget what you read</p>
 		<input type="text" id="search-bar" placeholder="Pesquisar">
 		<div class="notes-container">
-			<?php
+			<!--<?php
 				$sql = "SELECT * FROM books WHERE userid = ? ";
 				$stmt = $conn->prepare($sql);
 				$stmt->bindParam(1, $_SESSION['user_id']);
@@ -41,10 +41,16 @@
 				else {
 					echo "<p>No results were found.</p>";
 				}
-			?>
+			?>-->
 		</div>
 	</div>
 
-	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		$(".notes-container").load("./includes/loader.inc.php", {load_all_notes: true});	
+		$('#search-bar').keyup(function() {	
+			var search = $(this).val();
+			$(".notes-container").load("./includes/loader.inc.php", {search_key: search});	
+		});			
+	</script>
 </body>
 </html>
