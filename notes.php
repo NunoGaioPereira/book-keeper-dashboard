@@ -25,8 +25,8 @@
 								echo '<h3>'.$row['title'].'</h3>';
 								echo '<h4>'.$row['author'].'</h4>';
 							echo '</div>';
-							echo '<p>'.substr($row['notes'], 0, 200).'</p>';
-							echo '<a href="">Read More</a>';
+							echo '<p>'.substr($row['notes'], 0, 400).'</p>';
+							echo '<a href="./booknotes.php?book='.$row['id'].'">Read More</a>';
 						echo '</div>';
 						echo "</div>";
 					}
