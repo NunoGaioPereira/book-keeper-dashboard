@@ -49,7 +49,7 @@
 		$(".notes-container").load("./includes/loader.inc.php", {load_all_notes: true});	
 		$('#search-bar').keyup(function() {	
 			var search = $(this).val();
-			$(".notes-container").load("./includes/loader.inc.php", {search_key: search});	
+			$(".notes-container").load("./includes/loader_notes.inc.php", {search_key: search});	
 		});			
 	</script>
 </body>

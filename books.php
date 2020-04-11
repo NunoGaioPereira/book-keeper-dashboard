@@ -50,5 +50,13 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$("#main-table").load("./includes/loader_table.inc.php", {load_all_books: true});	
+		$('#search-bar').keyup(function() {	
+			var search = $(this).val();
+			$("#main-table").load("./includes/loader_table.inc.php", {search_key: search});	
+		});			
+	</script>
 </body>
 </html>
