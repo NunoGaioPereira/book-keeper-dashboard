@@ -6,6 +6,7 @@ if(isset($_POST['action'])) {
 	if($_POST['action'] == 'save_notes') {
 		try {
 			$notes = cleanInput($_POST['notes']);
+			// $notes = $_POST['notes'];
 			$book_id = cleanInput($_POST['book_id']);
 			$user_id = $_SESSION['user_id'];
 

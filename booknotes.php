@@ -37,13 +37,12 @@
 					<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
 				</div>
 			</div>
-			<!-- <div class="notes-container">
-				<h4>Notas</h4>
-				<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
-			</div> -->
 		</div>
 	</div>
-
+	<!-- <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+	<script type="text/javascript">
+		CKEDITOR.replace('editor')
+	</script> -->
 	<script>
 		var notes = document.getElementById('notes-input');
 		notes.addEventListener('focusout', function() {
@@ -56,7 +55,7 @@
 				cache: false,
 				data: {'action': 'save_notes', 'book_id': book_id, 'notes': notes_text},
 				success: function(msg){
-					alert(msg);
+					// alert(msg);
 				},
 			});
 		});
