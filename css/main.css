@@ -467,12 +467,16 @@ a.active::after {
 }
 
 .table-container .table-content .actions {
-	width: 100px;
+	width: 125px;
 	text-align: center;
 }
 
+.table-container .table-content .actions a {
+	display: inline-block;
+}
+
 .table-container .table-content .actions a img {
-	width: 30px;
+	height: 20px;
 }
 
 .table-container tr:nth-child(odd) {

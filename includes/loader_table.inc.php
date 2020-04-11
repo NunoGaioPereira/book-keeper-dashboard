@@ -20,13 +20,14 @@ if(isset($_POST['load_all_books'])) {
 			echo '<td>'.$row['author'].'</td>';
 			echo '<td>'.$row['nationality'].'</td>';
 			echo '<td>'.$row['gender'].'</td>';
-			echo '<td>'.$row['date_'].'</td>';
+			$dt = new DateTime($row['date_']);
+			echo '<td>'.$dt->format('d-m-Y').'</td>';
 			echo '<td class="actions">
-					<a href="#/"><img src="./imgs/eye.png"></a>
-			 		<a href="#/"><img src="./imgs/notes.png"></a>
-			 		<a href="#/"><img src="./imgs/trash.png"></a>
+					<a href="./booknotes.php?book='.$row['id'].'" title="Ver Livro"><img src="./imgs/eye.png"></a>
+			 		<a href="#/"  data-id="'.$row['id'].'" data-role="delete" title="Apagar livro"><img src="./imgs/trash.png"></a>
 				  </td>';
 			echo '</tr>';
+			// <a href="#/"><img src="./imgs/notes.png"></a>
 		}
 	}
 	else {
@@ -53,11 +54,11 @@ else if(isset($_POST['search_key'])){
 			echo '<td>'.$row['author'].'</td>';
 			echo '<td>'.$row['nationality'].'</td>';
 			echo '<td>'.$row['gender'].'</td>';
-			echo '<td>'.$row['date_'].'</td>';
+			$dt = new DateTime($row['date_']);
+			echo '<td>'.$dt->format('d-m-Y').'</td>';
 			echo '<td class="actions">
-					<a href="#/"><img src="./imgs/eye.png"></a>
-			 		<a href="#/"><img src="./imgs/notes.png"></a>
-			 		<a href="#/"><img src="./imgs/trash.png"></a>
+					<a href="./booknotes.php?book='.$row['id'].'" title="Ver Livro"><img src="./imgs/eye.png"></a>
+			 		<a href="#/"  data-id="'.$row['id'].'" data-role="delete" title="Apagar livro"><img src="./imgs/trash.png"></a>
 				  </td>';
 			echo '</tr>';
 		}
