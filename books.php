@@ -28,6 +28,7 @@
 							<th style="width: 120px; text-align: center;">Acções</th> -->
 						</tr>
 					</thead>
+					<!-- <tbody id="main-table"></tbody> -->
 				</table>
 			</div>
 			<div class="table-content">

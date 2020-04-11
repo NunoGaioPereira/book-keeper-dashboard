@@ -479,6 +479,24 @@ a.active::after {
 	height: 20px;
 }
 
+/*.table-container .table-content {
+	overflow-y: scroll;
+	height: 400px;
+}
+
+.table-container .actions {
+	width: 125px;
+	text-align: center;
+}
+
+.table-container .actions a {
+	display: inline-block;
+}
+
+.table-container .actions a img {
+	height: 20px;
+}*/
+
 .table-container tr:nth-child(odd) {
 	background: rgba(0,0,0,0.03);
 }

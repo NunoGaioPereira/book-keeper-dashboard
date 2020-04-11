@@ -12,7 +12,7 @@
 	</div>
 
 	<script type="text/javascript">
-		$(".notes-container").load("./includes/loader.inc.php", {load_all_notes: true});	
+		$(".notes-container").load("./includes/loader_notes.inc.php", {load_all_notes: true});	
 		$('#search-bar').keyup(function() {	
 			var search = $(this).val();
 			$(".notes-container").load("./includes/loader_notes.inc.php", {search_key: search});	

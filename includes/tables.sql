@@ -27,3 +27,21 @@ CREATE TABLE books (
 	FOREIGN KEY (userid) REFERENCES users(id)
 	ON DELETE CASCADE
 );
+
+CREATE TABLE readlist (
+	id int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	userid int(11) NOT NULL,
+	bookid int(11) NOT NULL,
+	FOREIGN KEY (userid) REFERENCES users(id),
+	FOREIGN KEY (bookid) REFERENCES books(id)
+	ON DELETE CASCADE
+);
+
+CREATE TABLE wishlist (
+	id int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	userid int(11) NOT NULL,
+	bookid int(11) NOT NULL,
+	FOREIGN KEY (userid) REFERENCES users(id),
+	FOREIGN KEY (bookid) REFERENCES books(id)
+	ON DELETE CASCADE
+);
