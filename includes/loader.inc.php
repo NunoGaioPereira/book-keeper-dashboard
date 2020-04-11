@@ -14,7 +14,7 @@ if(isset($_POST['load_all_notes'])) {
 		foreach($result as $row)
 		{	
 			echo "<div class=\"book\">";
-			if(file_exists('./imgs/books/'.$row['img'])){
+			if(file_exists('../imgs/books/'.$row['img'])){
 				echo '<img src="./imgs/books/'.$row['img'].'"/>';
 			}
 			else {
@@ -50,7 +50,7 @@ else if(isset($_POST['search_key'])){
 		{	
 			echo "<div class=\"book\">";
 			// echo '<img src="./imgs/books/'.$row['img'].'">';
-			if(file_exists('./imgs/books/'.$row['img'])){
+			if(file_exists('../imgs/books/'.$row['img'])){
 				echo '<img src="./imgs/books/'.$row['img'].'"/>';
 			}
 			else {
