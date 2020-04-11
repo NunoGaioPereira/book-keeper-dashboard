@@ -19,7 +19,13 @@
 					foreach($result as $row)
 					{	
 						echo "<div class=\"book\">";
-						echo '<img src="./imgs/books/'.$row['img'].'">';
+						// echo '<img src="./imgs/books/'.$row['img'].'">';
+						if(file_exists('./imgs/books/'.$row['img'])){
+							echo '<img src="./imgs/books/'.$row['img'].'"/>';
+						}
+						else {
+							echo '<img src="./imgs/books/default.png"/>';	
+						}
 						echo '<div class="book-info">';
 							echo '<div class="header">';
 								echo '<h3>'.$row['title'].'</h3>';

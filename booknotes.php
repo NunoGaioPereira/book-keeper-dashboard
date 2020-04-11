@@ -25,7 +25,7 @@
 		<div class="booknotes">	
 			<div class="top">
 			<?php
-				if(file_exists('http://www.mydomain.com/images/'.$book['img'])){
+				if(file_exists('./imgs/books/'.$book['img'])){
 					echo '<img src="./imgs/books/'.$book['img'].'"/>';
 				}
 				else {
