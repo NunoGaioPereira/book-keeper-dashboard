@@ -20,19 +20,24 @@
 			$stmt->bindParam(1, $book_id);
 			$stmt->execute();
 			$book = $stmt->fetch();
+			$dt = new DateTime($book['date_']);
 		?>
 		<div class="booknotes">	
 			<div class="top">
-				<img src="<?php echo './imgs/books/'.$book['img'].''; ?>"/>
+			<?php
+				if(file_exists('http://www.mydomain.com/images/'.$book['img'])){
+					echo '<img src="./imgs/books/'.$book['img'].'"/>';
+				}
+				else {
+					echo '<img src="./imgs/books/default.png"/>';	
+				}
+			?>
 				<div class="book-info">
 					<p><span>Título: </span><?php echo $book['title']?></p>
 					<p><span>Autor: </span><?php echo $book['author']?></p>
 					<p><span>Nacionalidade: </span><?php echo $book['nationality']?></p>
 					<p><span>Gênero: </span><?php echo $book['gender']?></p>
-					<p><span>Data: </span><?php echo $book['date_']?></p>
-					<!--// Format numeric date
-					$dt = new DateTime($result['dateNum']);
-					$dt = $dt->format('Y-m-d');-->
+					<p><span>Data: </span><?php echo $dt->format('d-m-Y')?></p>
 					<h4>Notas</h4>
 					<div class="notes" id="notes-input" contenteditable="true"><?php echo $book['notes']?></div>
 				</div>

@@ -59,7 +59,7 @@ if(isset($_POST['submit'])) {
 				header("Location: ../new_book.php?error=wrongtype");
 			}
 		} else {
-			$fileNameNew = "default.jpg";
+			$fileNameNew = "default.png";
 		}
 
 		try {
@@ -69,14 +69,6 @@ if(isset($_POST['submit'])) {
 			$date = cleanInput($_POST['book_date']);
 			$gender = cleanInput($_POST['gender']);
 			$userId = cleanInput($_POST['userId']);
-
-			echo $title."\n";
-			echo $author."\n";
-			echo $nationality."\n";
-			echo $date."\n";
-			echo $gender."\n";
-			echo $userId."\n";
-			echo $fileNameNew."\n";
 
 			$sql = "INSERT INTO books(userid, title, author, nationality, gender, date_, img) VALUES(?, ?, ?, ?, ?, ?, ?)";
 			$stmt = $conn->prepare($sql);
