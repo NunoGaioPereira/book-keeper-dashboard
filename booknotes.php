@@ -24,6 +24,10 @@
 			$stmt->bindParam(1, $book_id);
 			$stmt->execute();
 			$book = $stmt->fetch();
+			if(!$book) {
+				header("Location: ./new_book.php");
+				exit();		
+			}
 			$dt = new DateTime($book['date_']);
 		?>
 		<div class="booknotes">	
