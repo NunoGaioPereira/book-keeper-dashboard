@@ -414,6 +414,32 @@ a.active::after {
   border-radius: 10px;
 }
 
+.booknotes .book-actions ul {
+	list-style: none;
+	margin-top: 10px;
+}
+
+.booknotes .book-actions ul li {
+	margin-bottom: 10px;
+}
+
+.booknotes .book-actions ul li a {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	transition: color 0.2s ease-in-out;
+}
+
+.booknotes .book-actions ul li a:hover {
+	color: var(--main-color);
+}
+
+.booknotes .book-actions ul li a img {
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+}
+
 /*--------- BOOKS --------*/
 .table-container {
 	text-align: left;
@@ -478,24 +504,6 @@ a.active::after {
 .table-container .table-content .actions a img {
 	height: 20px;
 }
-
-/*.table-container .table-content {
-	overflow-y: scroll;
-	height: 400px;
-}
-
-.table-container .actions {
-	width: 125px;
-	text-align: center;
-}
-
-.table-container .actions a {
-	display: inline-block;
-}
-
-.table-container .actions a img {
-	height: 20px;
-}*/
 
 .table-container tr:nth-child(odd) {
 	background: rgba(0,0,0,0.03);
