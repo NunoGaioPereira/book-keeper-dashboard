@@ -52,16 +52,12 @@ if(isset($_POST['submit'])) {
 							$stmt = $conn->prepare($sql_latest_id);
 							$stmt->execute();
 							$book = $stmt->fetch();
-							if($book) { 
-								$book_id = $book['id'];
-							}
-							else {
-								$book_id = 1;
-							}
+							if($book) { $book_id = $book['id'];	}
+							else { $book_id = 1; }
 							$fileNameNew = $_SESSION['user_id']."_".$book_id.".png";
 							// $fileNameNew = $_SESSION['user_id']."_".".".$fileActuelExt;
-							$fileDestination = '../imgs/books/'.$fileNameNew;
-							move_uploaded_file($fileTmpName, $fileDestination);
+							// $fileDestination = '../imgs/books/'.$fileNameNew;
+							// move_uploaded_file($fileTmpName, $fileDestination);
 
 							$sql = "UPDATE books SET img = ? WHERE id = ? AND userid = ?";
 							$stmt = $conn->prepare($sql);
@@ -69,19 +65,7 @@ if(isset($_POST['submit'])) {
 							$stmt->bindParam(2, $book_id);
 							$stmt->bindParam(3, $userId);
 							$stmt->execute();
-
-							unlink('../imgs/books/temp.png');
-
-							/*$file_name = 'temp.png';
-							$path_user = '../imgs/books/'.$file_name.'';
-
-							if (!file_exists($path_user.$file_name)) 
-							{                   
-								
-							} else {
-							  unlink($path_user.$file_name);
-							}*/
-
+							rename('../imgs/books/temp.png', '../imgs/books/'.$fileNameNew.'');
 							header("Location: ../booknotes.php?book=".$book_id."");
 						}
 						catch(PDOException $e){
