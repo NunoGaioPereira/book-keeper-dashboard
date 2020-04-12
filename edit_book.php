@@ -33,7 +33,7 @@
 		<h2>Editar Livro</h2>
 		<p>B</p>
 		<div class="form-container">
-			<form class="new-book" method="POST" action="./includes/upload.inc.php" enctype="multipart/form-data">
+			<form class="new-book" method="POST" action="./includes/edit_book.inc.php?book_id=<?php echo $_GET['book'] ?>">
 				<?php
 					if(isset($_GET["error"])) {
 						if($_GET["error"] == "emptyfields") {
