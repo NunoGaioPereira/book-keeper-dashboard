@@ -44,7 +44,7 @@
 			</div>
 			<div class="book-actions">
 				<ul>
-					<li><a href="#/"><img src="./imgs/heart.png">Adicionar à Lista de Leitura</a></li>
+					<!-- <li><a href="#/"><img src="./imgs/heart.png">Adicionar à Lista de Leitura</a></li> -->
 					<li><a href="#/"><img src="./imgs/notes.png">Editar livro</a></li>
 					<li><a href="#/"><img src="./imgs/pic.png">Editar imagem de capa</a></li>
 					<li><a href="#/"><img src="./imgs/trash.png">Apagar livro</a></li>
