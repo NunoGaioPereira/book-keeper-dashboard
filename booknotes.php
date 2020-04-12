@@ -55,17 +55,38 @@
 				<ul>
 					<!-- <li><a href="#/"><img src="./imgs/heart.png">Adicionar à Lista de Leitura</a></li> -->
 					<li><a href="./edit_book.php?book=<?php echo $book['id'] ?>"><img src="./imgs/notes.png">Editar livro</a></li>
-					<li><a href="#/"><img src="./imgs/pic.png">Editar capa</a></li>
+					<li><a href="#/" id="edit-cover"><img src="./imgs/pic.png">Editar capa</a></li>
 					<li><a href="#/" id="delete-book"><img src="./imgs/trash.png">Apagar livro</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+
+	<div id="uploadimageModal" class="modal" >
+	  	<div class="modal-content">
+	        <div class="modal-header">
+	         	<h4 class="modal-title">Recortar Imagem</h4>
+	         	<img src="./imgs/cross.png" id="close-modal">
+	        </div>
+        	<div id="image_demo" style="max-width:98%; margin-top:30px"></div>
+       		<p><a class="crop_image">Upload</a></p>
+	    </div>
+	</div>
 	<!-- <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 	<script type="text/javascript">
 		CKEDITOR.replace('editor')
 	</script> -->
+	<link rel="stylesheet" type="text/css" href="./css/croppie.css">
+	<script src="./js/croppie.js"></script>
 	<script>
+		function openModal() {
+			var modal = document.getElementById("uploadimageModal");
+			document.getElementById("cover").classList.toggle('open');
+			modal.classList.toggle('show');
+		}
+		var edit_cover = document.getElementById("edit-cover");
+		edit_cover.addEventListener('click', openModal());
+
 		var notes = document.getElementById('notes-input');
 		notes.addEventListener('focusout', function() {
 			var notes_text = $(this).text();

@@ -154,9 +154,7 @@
 		});
 
 		$(document).ready(function(){
-
 		 $image_crop = $('#image_demo').croppie({
-		    // enableExif: true,
 		    mouseWheelZoom: false,
 		    enableResize: true,
 		    viewport: {
