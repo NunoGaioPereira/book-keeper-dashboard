@@ -46,8 +46,8 @@
 				<ul>
 					<!-- <li><a href="#/"><img src="./imgs/heart.png">Adicionar à Lista de Leitura</a></li> -->
 					<li><a href="#/"><img src="./imgs/notes.png">Editar livro</a></li>
-					<li><a href="#/"><img src="./imgs/pic.png">Editar imagem de capa</a></li>
-					<li><a href="#/"><img src="./imgs/trash.png">Apagar livro</a></li>
+					<li><a href="#/"><img src="./imgs/pic.png">Editar capa</a></li>
+					<li><a href="#/" id="delete-book"><img src="./imgs/trash.png">Apagar livro</a></li>
 				</ul>
 			</div>
 		</div>
@@ -67,10 +67,26 @@
 				type: "POST",
 				cache: false,
 				data: {'action': 'save_notes', 'book_id': book_id, 'notes': notes_text},
-				success: function(msg){
-					// alert(msg);
-				},
+				success: function(msg){ /* alert(msg); */}
 			});
+		});
+
+		$('#delete-book').on('click', function() {
+			let params = new URLSearchParams(location.search);
+			var book_id = params.get('book');
+			var confirmation = confirm('Tem a certeza que quer apagar o livro?');
+			if(confirmation) {
+				$.ajax({
+					url: "./includes/delete_book.inc.php",
+					type: "POST",
+					cache: false,
+					data: {'book_id': book_id, 'action': 'delete-book'},
+					success: function(){
+						alert("Livro apagado");
+						window.location.replace("./books.php");
+					}
+				});
+			}
 		});
 	</script>
 </body>

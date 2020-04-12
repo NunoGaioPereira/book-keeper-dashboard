@@ -3,7 +3,7 @@ session_start();
 require ("./dbh.inc.php");
 
 if(isset($_POST['action'])) {
-	if($_POST['action'] == "delete-concert") {
+	if($_POST['action'] == "delete-book") {
 
 		try {
 			$book_id = $_POST['book_id'];
