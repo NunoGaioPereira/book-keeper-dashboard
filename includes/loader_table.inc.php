@@ -15,18 +15,33 @@ if(isset($_POST['load_all_books'])) {
 		{	
 				// echo '<p>'.substr($row['notes'], 0, 400).'</p>';
 				// echo '<a href="./booknotes.php?book='.$row['id'].'">Read More</a>';
-			echo '<tr>';
-			echo '<td>'.$row['title'].'</td>';
-			echo '<td>'.$row['author'].'</td>';
-			echo '<td>'.$row['nationality'].'</td>';
-			echo '<td>'.$row['gender'].'</td>';
-			$dt = new DateTime($row['date_']);
-			echo '<td>'.$dt->format('d-m-Y').'</td>';
-			echo '<td class="actions">
-					<a href="./booknotes.php?book='.$row['id'].'" title="Ver Livro"><img src="./imgs/eye.png"></a>
-			 		<a href="#/"  data-id="'.$row['id'].'" data-role="delete" title="Apagar livro"><img src="./imgs/trash.png"></a>
-				  </td>';
-			echo '</tr>';
+
+			echo '<div class="book-row">';
+				echo '<span class="icon"><img src="./imgs/book.png"></span>';
+				echo '<p class="title">'.$row['title'].'</p>';
+				echo '<p class="author">'.$row['author'].'</p>';
+				echo '<p class="nationality">'.$row['nationality'].'</p>';
+				echo '<p class="gender">'.$row['gender'].'</p>';
+				$dt = new DateTime($row['date_']);
+				echo '<p class="date">'.$dt->format('d-m-Y').'</p>';
+				echo '<div class="actions">';
+					echo '<a href="./booknotes.php?book='.$row['id'].'" title="Ver Livro"><img src="./imgs/eye.png"></a>';
+					echo '<a href="#/"  data-id="'.$row['id'].'" data-role="delete" title="Apagar livro"><img src="./imgs/trash.png"></a>';
+				echo '</div>';
+			echo '</div>';
+
+			// echo '<tr>';
+			// echo '<td>'.$row['title'].'</td>';
+			// echo '<td>'.$row['author'].'</td>';
+			// echo '<td>'.$row['nationality'].'</td>';
+			// echo '<td>'.$row['gender'].'</td>';
+			// $dt = new DateTime($row['date_']);
+			// echo '<td>'.$dt->format('d-m-Y').'</td>';
+			// echo '<td class="actions">
+			// 		<a href="./booknotes.php?book='.$row['id'].'" title="Ver Livro"><img src="./imgs/eye.png"></a>
+			//  		<a href="#/"  data-id="'.$row['id'].'" data-role="delete" title="Apagar livro"><img src="./imgs/trash.png"></a>
+			// 	  </td>';
+			// echo '</tr>';
 			// <a href="#/"><img src="./imgs/notes.png"></a>
 		}
 	}

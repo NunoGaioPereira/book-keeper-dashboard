@@ -11,39 +11,27 @@
 			<div class="header">
 				<input type="text" id="search-bar" placeholder="Pesquisar">
 			</div>
-			<div class="table-header">
-				<table>
-					<thead>
-						<tr>
-							<th>Título</th>
-							<th>Autor</th>
-							<th>Nacionalidade</th>
-							<th>Gênero</th>
-							<th>Data</th>
-							<th width="100px">Acções</th>
-							<!-- <th style="width: 10%">Data</th>
-							<th style="width: 8%">Link</th>
-							<th style="width: 9%; text-align: center;">Status</th>
-							<th style="width: 5%; text-align: center;">Língua</th>
-							<th style="width: 120px; text-align: center;">Acções</th> -->
-						</tr>
-					</thead>
-					<!-- <tbody id="main-table"></tbody> -->
-				</table>
-			</div>
-			<div class="table-content">
-				<table>
-					<tbody id="main-table"></tbody>
-				</table>
+			<div id="books-container">
+				<!-- <div class="book-row">
+					<span class="icon"><img src="./imgs/book.png"></span>
+					<p class="title">O livro sem nome</p>
+					<p class="author">Herman Hesse</p>
+					<p class="gender">Romance</p>
+					<p class="date">10-03-2059</p>
+					<div class="actions">
+						<a title="Ver Livro"><img src="./imgs/eye.png"></a>
+						<a title="Ver Livro"><img src="./imgs/trash.png"></a>
+					</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-		$("#main-table").load("./includes/loader_table.inc.php", {load_all_books: true});	
+		$("#books-container").load("./includes/loader_table.inc.php", {load_all_books: true});	
 		$('#search-bar').keyup(function() {	
 			var search = $(this).val();
-			$("#main-table").load("./includes/loader_table.inc.php", {search_key: search});	
+			$("#books-container").load("./includes/loader_table.inc.php", {search_key: search});	
 		});		
 
 		$(document).on('click', 'a[data-role=delete]', function() {			
@@ -57,7 +45,7 @@
 					data: {'book_id': book_id, 'action': 'delete-book'},
 					success: function(){
 						alert("Livro apagado");
-						$("#main-table").load("./includes/loader_table.inc.php", {load_all_books: true});	
+						$("#books-container").load("./includes/loader_table.inc.php", {load_all_books: true});	
 					}
 				});
 			}
