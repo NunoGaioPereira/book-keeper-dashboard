@@ -14,6 +14,7 @@ if(isset($_POST['action'])) {
 			$stmt->bindParam(1, $book_id);
 			$stmt->bindParam(2, $_SESSION['user_id']);
 			$stmt->execute();
+			unlink("../imgs/books/".$_SESSION['user_id']."_".$book_id.".png");
 			header("Location: ../notes.php?msg=deletedbook");
 			$conn = null;
 			exit();
