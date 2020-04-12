@@ -195,7 +195,6 @@
 		        data:{"image": response},
 		        success:function(data)
 		        {
-		          // $('#uploadimageModal').modal('hide');
 		          openModal();
 		          $('#uploaded_image').html(data);
 		        }

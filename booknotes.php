@@ -24,6 +24,7 @@
 			$stmt->bindParam(1, $book_id);
 			$stmt->execute();
 			$book = $stmt->fetch();
+			// Non valid book (id)
 			if(!$book) {
 				header("Location: ./new_book.php");
 				exit();		
