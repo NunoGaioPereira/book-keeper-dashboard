@@ -69,11 +69,12 @@
 									$stmt->execute();
 									if($stmt->rowCount() > 0)
 									{
-										$result = $stmt->fetchAll();
+										$options = $stmt->fetchAll();
 
-										foreach($result as $row)
+										foreach($options as $row)
 										{	
-											echo "<option>".$row['gender']."</option>";
+											if($result['gender'] == $row['gender']){echo "<option selected>".$row['gender']."</option>";}
+											else { echo "<option>".$row['gender']."</option>"; }
 										}
 									}
 								}
