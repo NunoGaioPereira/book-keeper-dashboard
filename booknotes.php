@@ -13,6 +13,10 @@
 				header("Location: ./new_book.php");
 				exit();
 			}
+			else if($_GET['book'] == '') {
+				header("Location: ./new_book.php");
+				exit();	
+			}
 
 			$book_id = $_GET['book'];
 			$sql_latest_id = "SELECT * FROM books WHERE id = ?";

@@ -44,7 +44,25 @@
 		$('#search-bar').keyup(function() {	
 			var search = $(this).val();
 			$("#main-table").load("./includes/loader_table.inc.php", {search_key: search});	
-		});			
+		});		
+
+		$('#delete-book').on('click', function() {
+			
+			var book_id = params.get('book');
+			var confirmation = confirm('Tem a certeza que quer apagar o livro?');
+			if(confirmation) {
+				$.ajax({
+					url: "./includes/delete_book.inc.php",
+					type: "POST",
+					cache: false,
+					data: {'book_id': book_id, 'action': 'delete-book'},
+					success: function(){
+						alert("Livro apagado");
+						window.location.replace("./books.php");
+					}
+				});
+			}
+		});	
 	</script>
 </body>
 </html>

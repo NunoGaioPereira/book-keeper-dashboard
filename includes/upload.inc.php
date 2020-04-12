@@ -10,6 +10,18 @@ if(isset($_POST['submit'])) {
 	}
 	else {
 
+		// Get largest concert id
+		$sql_latest_id = "SELECT id FROM books ORDER BY id DESC LIMIT 1";
+		$stmt = $conn->prepare($sql_latest_id);
+		$stmt->execute();
+		$book = $stmt->fetch();
+		if($book) { 
+			$book_id = $book['id'] + 1;
+		}
+		else {
+			$book_id = 1;
+		}
+		
 		// Handle image field
 		if($_FILES['upload_image']['size'] != 0 && $_FILES['upload_image']['error'] == 0) {
 			$file  = $_FILES['upload_image'];
@@ -28,18 +40,6 @@ if(isset($_POST['submit'])) {
 			if(in_array($fileActuelExt, $allowed)) {
 				if($fileError === 0){
 					if($fileSize < 1000000) {
-
-						// Get largest concert id
-						$sql_latest_id = "SELECT id FROM books ORDER BY id DESC LIMIT 1";
-						$stmt = $conn->prepare($sql_latest_id);
-						$stmt->execute();
-						$book = $stmt->fetch();
-						if($book) { 
-							$book_id = $book['id'] + 1;
-						}
-						else {
-							$book_id = 1;
-						}
 						// $fileNameNew = uniqid('', true).".".$fileActuelExt;
 						// $fileNameNew = $_SESSION['user_id'].$book_id.".".$fileActuelExt;
 						// $fileNameNew = $_SESSION['user_id']."_".$book_id.".".$fileActuelExt;
