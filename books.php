@@ -46,9 +46,8 @@
 			$("#main-table").load("./includes/loader_table.inc.php", {search_key: search});	
 		});		
 
-		$('#delete-book').on('click', function() {
-			
-			var book_id = params.get('book');
+		$(document).on('click', 'a[data-role=delete]', function() {			
+			var book_id = $(this).data('id') ;
 			var confirmation = confirm('Tem a certeza que quer apagar o livro?');
 			if(confirmation) {
 				$.ajax({
@@ -58,7 +57,7 @@
 					data: {'book_id': book_id, 'action': 'delete-book'},
 					success: function(){
 						alert("Livro apagado");
-						window.location.replace("./books.php");
+						$("#main-table").load("./includes/loader_table.inc.php", {load_all_books: true});	
 					}
 				});
 			}
