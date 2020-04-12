@@ -8,7 +8,7 @@
 		<p>Dashboard Overview</p>
 
 		<div class="home-container">
-			<div class="readlist">
+			<!-- <div class="readlist">
 				<div class="header">
 					<h3>Read List</h3>
 					<a href="#/">+</a>
@@ -103,7 +103,7 @@
 						<img src="./imgs/trash.png">
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
