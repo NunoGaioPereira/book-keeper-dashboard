@@ -62,7 +62,7 @@
 		</div>
 	</div>
 
-	<div id="uploadimageModal" class="modal" >
+	<div id="uploadimageModal" class="modal">
 	  	<div class="modal-content">
 	        <div class="modal-header">
 	         	<h4 class="modal-title">Recortar Imagem</h4>
@@ -85,7 +85,7 @@
 			modal.classList.toggle('show');
 		}
 		var edit_cover = document.getElementById("edit-cover");
-		edit_cover.addEventListener('click', openModal());
+		edit_cover.addEventListener('click', openModal);
 
 		var notes = document.getElementById('notes-input');
 		notes.addEventListener('focusout', function() {
